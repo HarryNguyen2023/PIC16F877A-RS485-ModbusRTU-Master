@@ -20,7 +20,7 @@ enum coil_status
 };
 
 // Variable to define the length of the message going to be received
-uint16_t rcv_buffer_len;
+uint16_t master_rcv_buffer_len;
 
 uint8_t modbusReadCoils(uint8_t *tx_buffer, uint16_t len, uint8_t mode, uint8_t slave_address, uint16_t start_coil, uint16_t coil_num);
 uint8_t modbusReadRegisters(uint8_t *tx_buffer, uint16_t len, uint8_t mode, uint8_t slave_address, uint16_t start_register, uint16_t register_num);
