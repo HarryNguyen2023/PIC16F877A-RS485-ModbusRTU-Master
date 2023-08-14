@@ -73,7 +73,8 @@ void UARTTransRcvInit()
 void UARTsendChar(char c)
 {
     // Check if the transmit register is empty
-    while (! TRMT);
+    while (!TRMT)
+        ;
     TXREG = c;
 }
 
