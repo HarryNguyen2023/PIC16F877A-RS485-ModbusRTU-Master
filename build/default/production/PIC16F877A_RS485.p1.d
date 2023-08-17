@@ -1,0 +1,4 @@
+build/default/production/PIC16F877A_RS485.p1:  \
+PIC16F877A_RS485.c  \
+PIC16F877A_RS485.h  \
+PIC16F877A_UART.h 

@@ -1,0 +1,563 @@
+Microchip MPLAB XC8 Compiler V2.41
+
+Linker command line:
+
+-W-3 \
+  --edf=C:\Program Files\Microchip\xc8\v2.41\pic\dat\20230208172133_en.msgs \
+  -cn \
+  -h+dist/default/production\PIC16F877A_RS485_ModbusRTU_master.X.production.sym \
+  --cmf=dist/default/production\PIC16F877A_RS485_ModbusRTU_master.X.production.cmf \
+  -z -Q16F877A -oC:\Users\84935\AppData\Local\Temp\xcAs62o.\driver_tmp_3.o \
+  --defsym=__MPLAB_BUILD=1 --fixupoverflow=error \
+  -Mdist/default/production/PIC16F877A_RS485_ModbusRTU_master.X.production.map \
+  --md=C:\Users\84935\AppData\Local\Temp\xcAs62o.\driver_tmp_0.dat -E1 \
+  -ver=XC8 Compiler --acfsm=1493 -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh \
+  -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 -AENTRY=00h-0FFhx32 \
+  -ACOMMON=070h-07Fh -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh \
+  -ABANK2=0110h-016Fh -ABANK3=0190h-01EFh \
+  -ARAM=020h-06Fh,0A0h-0EFh,0110h-016Fh,0190h-01EFh \
+  -AABS1=020h-07Fh,0A0h-0EFh,0110h-016Fh,0190h-01EFh -ASFR0=00h-01Fh \
+  -ASFR1=080h-09Fh -ASFR2=0100h-010Fh -ASFR3=0180h-018Fh \
+  -ACONFIG=02007h-02007h -DCONFIG=2 -AIDLOC=02000h-02003h -DIDLOC=2 \
+  -AEEDATA=00h-0FFh/02100h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
+  -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 \
+  -preset_vec=00h,intentry=04h,init,end_init -ppowerup=CODE -pcinit=CODE \
+  -pfunctab=ENTRY -k \
+  C:\Users\84935\AppData\Local\Temp\xcAs62o.\driver_tmp_12.o \
+  dist/default/production\PIC16F877A_RS485_ModbusRTU_master.X.production.o 
+
+Object code version is 3.11
+
+Machine type is 16F877A
+
+
+
+                Name                               Link     Load   Length Selector   Space Scale
+C:\Users\84935\AppData\Local\Temp\xcAs62o.\driver_tmp_12.o
+                end_init                             10       10        3        8       0
+                reset_vec                             0        0        3        0       0
+                config                             2007     2007        1        0       4
+                idloc                              2000     2000        4        0       5
+dist/default/production\PIC16F877A_RS485_ModbusRTU_master.X.production.o
+                cinit                                13       13       22        8       0
+                intentry                              4        4        C        8       0
+                config                             2007     2007        1        0       4
+                idloc                              2000     2000        4        0       5
+                text21                              F42      F42        6     1E84       0
+                text20                               35       35       4D        8       0
+                text19                              F9B      F9B       17     1F36       0
+                text18                              F76      F76       12     1EEC       0
+                text17                               EA       EA       15        8       0
+                text16                              F4E      F4E        7     1E9C       0
+                text15                              FE3      FE3       1D     1FC6       0
+                text14                              F5D      F5D        B     1EBA       0
+                text13                              F48      F48        6     1E90       0
+                text12                              F68      F68        E     1ED0       0
+                text11                              7D7      7D7       25      624       0
+                text10                              FB2      FB2       18     1F64       0
+                text9                                CC       CC       1E        8       0
+                text8                                82       82       4A        8       0
+                text7                               5C6      5C6       79      624       0
+                text6                               63F      63F       74      624       0
+                text5                               71C      71C       66      624       0
+                text4                               52F      52F       97      624       0
+                text3                               782      782       55      624       0
+                text2                               6B3      6B3       69      624       0
+                text1                               45C      45C       D3      624       0
+                maintext                            312      312      14A      624       0
+                cstackBANK0                          20       20       23       20       1
+                cstackCOMMON                         70       70        E       70       1
+                clrtext                             F55      F55        8     1EAA       0
+                inittext                            F88      F88       13     1F10       0
+                bssBANK1                             A0       A0       32       A0       1
+                dataBANK0                            43       43       19       20       1
+                bssBANK0                             5C       5C        B       20       1
+                stringtext                          100      100      212        2       0
+                idataBANK0                          FCA      FCA       19     1F94       0
+
+TOTAL           Name                               Link     Load   Length     Space
+        CLASS   CODE           
+                end_init                             10       10        3         0
+                cinit                                13       13       22         0
+                intentry                              4        4        C         0
+                reset_vec                             0        0        3         0
+                text21                              F42      F42        6         0
+                text20                               35       35       4D         0
+                text19                              F9B      F9B       17         0
+                text18                              F76      F76       12         0
+                text17                               EA       EA       15         0
+                text16                              F4E      F4E        7         0
+                text15                              FE3      FE3       1D         0
+                text14                              F5D      F5D        B         0
+                text13                              F48      F48        6         0
+                text12                              F68      F68        E         0
+                text11                              7D7      7D7       25         0
+                text10                              FB2      FB2       18         0
+                text9                                CC       CC       1E         0
+                text8                                82       82       4A         0
+                text7                               5C6      5C6       79         0
+                text6                               63F      63F       74         0
+                text5                               71C      71C       66         0
+                text4                               52F      52F       97         0
+                text3                               782      782       55         0
+                text2                               6B3      6B3       69         0
+                text1                               45C      45C       D3         0
+                maintext                            312      312      14A         0
+                clrtext                             F55      F55        8         0
+                inittext                            F88      F88       13         0
+                idataBANK0                          FCA      FCA       19         0
+
+        CLASS   STRCODE        
+                stringtext                          100      100      212         0
+
+        CLASS   STRING         
+
+        CLASS   CONST          
+
+        CLASS   ENTRY          
+
+        CLASS   COMMON         
+                cstackCOMMON                         70       70        E         1
+
+        CLASS   BANK0          
+                cstackBANK0                          20       20       23         1
+                dataBANK0                            43       43       19         1
+                bssBANK0                             5C       5C        B         1
+
+        CLASS   BANK1          
+                bssBANK1                             A0       A0       32         1
+
+        CLASS   BANK2          
+
+        CLASS   BANK3          
+
+        CLASS   RAM            
+
+        CLASS   ABS1           
+                abs_s1                               7E       7E        2         1
+
+        CLASS   SFR0           
+
+        CLASS   SFR1           
+
+        CLASS   SFR2           
+
+        CLASS   SFR3           
+
+        CLASS   CONFIG         
+                config                             2007     2007        1         4
+
+        CLASS   IDLOC          
+                idloc                              2000     2000        4         5
+
+        CLASS   EEDATA         
+
+        CLASS   STACK          
+
+
+
+SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
+
+                reset_vec                      000000  000003  000003         0       0  CODE        2
+                intentry                       000004  0000FB  0000FF         8       0  CODE        2
+                cstackBANK0                    000020  000047  000067        20       1  BANK0       1
+                cstackCOMMON                   000070  00000E  00007E        70       1  COMMON      1
+                bssBANK1                       0000A0  000032  0000D2        A0       1  BANK1       1
+                stringtext                     000100  000212  000312         2       0  STRCODE     2
+                maintext                       000312  0004EA  0007FC       624       0  CODE        2
+                text21                         000F42  000006  000F48      1E84       0  CODE        2
+                text13                         000F48  000006  000F4E      1E90       0  CODE        2
+                text16                         000F4E  000007  000F55      1E9C       0  CODE        2
+                clrtext                        000F55  000008  000F5D      1EAA       0  CODE        2
+                text14                         000F5D  00000B  000F68      1EBA       0  CODE        2
+                text12                         000F68  00000E  000F76      1ED0       0  CODE        2
+                text18                         000F76  000012  000F88      1EEC       0  CODE        2
+                inittext                       000F88  000013  000F9B      1F10       0  CODE        2
+                text19                         000F9B  000017  000FB2      1F36       0  CODE        2
+                text10                         000FB2  000018  000FCA      1F64       0  CODE        2
+                idataBANK0                     000FCA  000019  000FE3      1F94       0  CODE        2
+                text15                         000FE3  00001D  001000      1FC6       0  CODE        2
+
+
+UNUSED ADDRESS RANGES
+
+        Name                Unused          Largest block    Delta
+        BANK0            0067-006F              9           1
+        BANK1            00D2-00EF             1E           1
+        BANK2            0110-016F             60           1
+        BANK3            0190-01EF             60           1
+        CODE             0003-0003              1           2
+                         00FF-00FF              1
+                         07FC-0F41              4
+                         1000-1FFF            800
+        CONST            0003-0003              1           2
+                         00FF-00FF              1
+                         07FC-0F41            100
+                         1000-1FFF            100
+        EEDATA           2100-21FF            100           2
+        ENTRY            0003-0003              1           2
+                         00FF-00FF              1
+                         07FC-0F41            100
+                         1000-1FFF            100
+        RAM              0067-006F              9           1
+                         00D2-00EF             1E
+                         0110-016F             60
+                         0190-01EF             60
+        SFR0             0000-001F             20           1
+        SFR1             0080-009F             20           1
+        SFR2             0100-010F             10           1
+        SFR3             0180-018F             10           1
+        STRCODE          0003-0003              1           2
+                         00FF-00FF              1
+                         07FC-0F41            746
+                         1000-1FFF           1000
+        STRING           0003-0003              1           2
+                         00FF-00FF              1
+                         07FC-0F41            100
+                         1000-1FFF            100
+
+                                  Symbol Table
+
+?_RS485rcvString                    cstackCOMMON 0076
+?_UARTrcvString                     cstackCOMMON 0071
+?___awdiv                           cstackBANK0  0023
+?_crc16                             cstackBANK0  0023
+?_modbusRcvResponse                 cstackCOMMON 007B
+RS485rcvString@done                 cstackCOMMON 0078
+RS485rcvString@length               cstackCOMMON 0076
+RS485rcvString@rcv_buffer           cstackCOMMON 007A
+RS485sendString@str                 cstackBANK0  002A
+UARTrcvChar@c                       cstackCOMMON 0070
+UARTrcvString@length                cstackCOMMON 0071
+UARTrcvString@rcv_buffer            cstackCOMMON 0075
+UARTsendChar@c                      cstackBANK0  0023
+UARTsendString@i                    cstackBANK0  0025
+UARTsendString@str                  cstackBANK0  0027
+_BRGH                               (abs)        04C2
+_CREN                               (abs)        00C4
+_GIE                                (abs)        005F
+_ISR                                text17       00EA
+_PEIE                               (abs)        005E
+_RCIE                               (abs)        0465
+_RCIF                               (abs)        0065
+_RCREG                              (abs)        001A
+_RD0                                (abs)        0040
+_RS485Init                          text14       0F5D
+_RS485TxConfig                      text16       0F4E
+_RS485rcvString                     text19       0F9B
+_RS485sendString                    text10       0FB2
+_RX9                                (abs)        00C6
+_SPBRG                              (abs)        0099
+_SPEN                               (abs)        00C7
+_SYNC                               (abs)        04C4
+_TRISC6                             (abs)        043E
+_TRISC7                             (abs)        043F
+_TRISD0                             (abs)        0440
+_TRMT                               (abs)        04C1
+_TX9                                (abs)        04C6
+_TXEN                               (abs)        04C5
+_TXREG                              (abs)        0019
+_UARTTransRcvInit                   text15       0FE3
+_UARTrcvChar                        text21       0F42
+_UARTrcvString                      text20       0035
+_UARTsendChar                       text12       0F68
+_UARTsendString                     text11       07D7
+__H__absolute__                     __absolute__ 0000
+__Habs1                             abs1         0000
+__Hbank0                            bank0        0000
+__Hbank1                            bank1        0000
+__Hbank2                            bank2        0000
+__Hbank3                            bank3        0000
+__HbssBANK0                         bssBANK0     0000
+__HbssBANK1                         bssBANK1     0000
+__Hcinit                            cinit        0035
+__Hclrtext                          clrtext      0000
+__Hcode                             code         0000
+__Hcommon                           common       0000
+__Hconfig                           config       2008
+__HcstackBANK0                      cstackBANK0  0000
+__HcstackCOMMON                     cstackCOMMON 0000
+__HdataBANK0                        dataBANK0    0000
+__Heeprom_data                      eeprom_data  0000
+__Hend_init                         end_init     0013
+__Hfunctab                          functab      0000
+__HidataBANK0                       idataBANK0   0000
+__Hidloc                            idloc        2004
+__Hinit                             init         0010
+__Hinittext                         inittext     0000
+__Hintentry                         intentry     0010
+__Hmaintext                         maintext     0000
+__Hpowerup                          powerup      0000
+__Hram                              ram          0000
+__Hreset_vec                        reset_vec    0003
+__Hsfr0                             sfr0         0000
+__Hsfr1                             sfr1         0000
+__Hsfr2                             sfr2         0000
+__Hsfr3                             sfr3         0000
+__Hspace_0                          (abs)        1000
+__Hspace_1                          (abs)        00D2
+__Hspace_2                          (abs)        0000
+__Hspace_3                          (abs)        0000
+__Hspace_4                          (abs)        400F
+__Hstack                            stack        0000
+__Hstrings                          strings      0000
+__Hstringtext                       stringtext   0000
+__Htext                             text         0000
+__L__absolute__                     __absolute__ 0000
+__Labs1                             abs1         0000
+__Lbank0                            bank0        0000
+__Lbank1                            bank1        0000
+__Lbank2                            bank2        0000
+__Lbank3                            bank3        0000
+__LbssBANK0                         bssBANK0     0000
+__LbssBANK1                         bssBANK1     0000
+__Lcinit                            cinit        0013
+__Lclrtext                          clrtext      0000
+__Lcode                             code         0000
+__Lcommon                           common       0000
+__Lconfig                           config       0000
+__LcstackBANK0                      cstackBANK0  0000
+__LcstackCOMMON                     cstackCOMMON 0000
+__LdataBANK0                        dataBANK0    0000
+__Leeprom_data                      eeprom_data  0000
+__Lend_init                         end_init     0010
+__Lfunctab                          functab      0000
+__LidataBANK0                       idataBANK0   0000
+__Lidloc                            idloc        0000
+__Linit                             init         0010
+__Linittext                         inittext     0000
+__Lintentry                         intentry     0004
+__Lmaintext                         maintext     0000
+__Lpowerup                          powerup      0000
+__Lram                              ram          0000
+__Lreset_vec                        reset_vec    0000
+__Lsfr0                             sfr0         0000
+__Lsfr1                             sfr1         0000
+__Lsfr2                             sfr2         0000
+__Lsfr3                             sfr3         0000
+__Lspace_0                          (abs)        0000
+__Lspace_1                          (abs)        0000
+__Lspace_2                          (abs)        0000
+__Lspace_3                          (abs)        0000
+__Lspace_4                          (abs)        0000
+__Lstack                            stack        0000
+__Lstrings                          strings      0000
+__Lstringtext                       stringtext   0000
+__Ltext                             text         0000
+__S0                                (abs)        1000
+__S1                                (abs)        00D2
+__S3                                (abs)        0000
+___awdiv                            text2        06B3
+___awdiv@counter                    cstackBANK0  0027
+___awdiv@dividend                   cstackBANK0  0025
+___awdiv@divisor                    cstackBANK0  0023
+___awdiv@quotient                   cstackBANK0  0029
+___awdiv@sign                       cstackBANK0  0028
+___int_sp                           stack        0000
+___latbits                          (abs)        0002
+___sp                               stack        0000
+___stackhi                          (abs)        0000
+___stacklo                          (abs)        0000
+__end_of_ISR                        text17       00FF
+__end_of_RS485Init                  text14       0F68
+__end_of_RS485TxConfig              text16       0F55
+__end_of_RS485rcvString             text19       0FB2
+__end_of_RS485sendString            text10       0FCA
+__end_of_UARTTransRcvInit           text15       1000
+__end_of_UARTrcvChar                text21       0F48
+__end_of_UARTrcvString              text20       0082
+__end_of_UARTsendChar               text12       0F76
+__end_of_UARTsendString             text11       07FC
+__end_of___awdiv                    text2        071C
+__end_of__initialization            cinit        0031
+__end_of__stringtab                 stringtext   0112
+__end_of_clearBuffer                text9        00EA
+__end_of_crc16                      text8        00CC
+__end_of_main                       maintext     045C
+__end_of_modbusRTUInit              text13       0F4E
+__end_of_modbusRcvResponse          text18       0F88
+__end_of_modbusReadCoils            text7        063F
+__end_of_modbusReadRegisters        text6        06B3
+__end_of_modbusWriteCoil            text5        0782
+__end_of_modbusWriteCoils           text4        05C6
+__end_of_modbusWriteRegister        text3        07D7
+__end_of_modbusWriteRegisters       text1        052F
+__end_of_wCRCTable                  stringtext   0312
+__initialization                    cinit        0013
+__pbssBANK0                         bssBANK0     005C
+__pbssBANK1                         bssBANK1     00A0
+__pcstackBANK0                      cstackBANK0  0020
+__pcstackCOMMON                     cstackCOMMON 0070
+__pdataBANK0                        dataBANK0    0043
+__pidataBANK0                       idataBANK0   0FCA
+__pintentry                         intentry     0004
+__pmaintext                         maintext     0312
+__pstringtext                       stringtext   0100
+__ptext1                            text1        045C
+__ptext10                           text10       0FB2
+__ptext11                           text11       07D7
+__ptext12                           text12       0F68
+__ptext13                           text13       0F48
+__ptext14                           text14       0F5D
+__ptext15                           text15       0FE3
+__ptext16                           text16       0F4E
+__ptext17                           text17       00EA
+__ptext18                           text18       0F76
+__ptext19                           text19       0F9B
+__ptext2                            text2        06B3
+__ptext20                           text20       0035
+__ptext21                           text21       0F42
+__ptext3                            text3        0782
+__ptext4                            text4        052F
+__ptext5                            text5        071C
+__ptext6                            text6        063F
+__ptext7                            text7        05C6
+__ptext8                            text8        0082
+__ptext9                            text9        00CC
+__stringbase                        stringtext   0112
+__stringtab                         stringtext   0100
+_clearBuffer                        text9        00CC
+_coil_write_state                   dataBANK0    005A
+_crc16                              text8        0082
+_error_msg                          dataBANK0    0043
+_main                               maintext     0312
+_master_rcv_buffer_len              bssBANK0     005E
+_modbusRTUInit                      text13       0F48
+_modbusRcvResponse                  text18       0F76
+_modbusReadCoils                    text7        05C6
+_modbusReadRegisters                text6        063F
+_modbusWriteCoil                    text5        071C
+_modbusWriteCoils                   text4        052F
+_modbusWriteRegister                text3        0782
+_modbusWriteRegisters               text1        045C
+_rcv_buffer                         bssBANK1     00A0
+_register_write_buffer              dataBANK0    0056
+_state                              bssBANK0     0066
+_tx_buffer                          bssBANK1     00B9
+_uart_str_idx                       bssBANK0     0064
+_wCRCTable                          stringtext   0112
+btemp                               (abs)        007E
+clearBuffer@buffer                  cstackBANK0  0028
+clearBuffer@i                       cstackBANK0  0027
+clearBuffer@len                     cstackBANK0  0023
+clear_ram0                          clrtext      0F55
+crc16@buffer                        cstackBANK0  002C
+crc16@crcWord                       cstackBANK0  002A
+crc16@length                        cstackBANK0  0023
+crc16@temp                          cstackBANK0  0029
+end_of_initialization               cinit        0031
+init_fetch0                         inittext     0F88
+init_ram0                           inittext     0F8C
+interrupt_function                  intentry     0004
+intlevel0                           functab      0000
+intlevel1                           functab      0000
+intlevel2                           functab      0000
+intlevel3                           functab      0000
+intlevel4                           functab      0000
+intlevel5                           functab      0000
+modbusRcvResponse@rcv_buffer        cstackCOMMON 007D
+modbusReadCoils@checksum            cstackBANK0  0037
+modbusReadCoils@coil_num            cstackBANK0  0033
+modbusReadCoils@len                 cstackBANK0  002D
+modbusReadCoils@mode                cstackBANK0  002F
+modbusReadCoils@slave_address       cstackBANK0  0030
+modbusReadCoils@start_coil          cstackBANK0  0031
+modbusReadCoils@tx_buffer           cstackBANK0  0039
+modbusReadRegisters@checksum        cstackBANK0  0037
+modbusReadRegisters@len             cstackBANK0  002D
+modbusReadRegisters@mode            cstackBANK0  002F
+modbusReadRegisters@register_num    cstackBANK0  0033
+modbusReadRegisters@slave_address   cstackBANK0  0030
+modbusReadRegisters@start_register  cstackBANK0  0031
+modbusReadRegisters@tx_buffer       cstackBANK0  0039
+modbusWriteCoil@checksum            cstackBANK0  0033
+modbusWriteCoil@coil                cstackBANK0  0030
+modbusWriteCoil@coil_state          cstackBANK0  0032
+modbusWriteCoil@len                 cstackBANK0  002D
+modbusWriteCoil@slave_address       cstackBANK0  002F
+modbusWriteCoil@tx_buffer           cstackBANK0  0035
+modbusWriteCoils@checksum           cstackBANK0  003B
+modbusWriteCoils@coil_num           cstackBANK0  0032
+modbusWriteCoils@coil_state         cstackBANK0  0034
+modbusWriteCoils@i                  cstackBANK0  003D
+modbusWriteCoils@len                cstackBANK0  002D
+modbusWriteCoils@slave_address      cstackBANK0  002F
+modbusWriteCoils@start_coil         cstackBANK0  0030
+modbusWriteCoils@tx_buffer          cstackBANK0  003E
+modbusWriteRegister@checksum        cstackBANK0  0034
+modbusWriteRegister@len             cstackBANK0  002D
+modbusWriteRegister@register_       cstackBANK0  0030
+modbusWriteRegister@register_value  cstackBANK0  0032
+modbusWriteRegister@slave_address   cstackBANK0  002F
+modbusWriteRegister@tx_buffer       cstackBANK0  0036
+modbusWriteRegisters@checksum       cstackBANK0  003C
+modbusWriteRegisters@i              cstackBANK0  003E
+modbusWriteRegisters@len            cstackBANK0  002D
+modbusWriteRegisters@register_num   cstackBANK0  0032
+modbusWriteRegisters@register_value cstackBANK0  0034
+modbusWriteRegisters@slave_address  cstackBANK0  002F
+modbusWriteRegisters@start_register cstackBANK0  0030
+modbusWriteRegisters@tx_buffer      cstackBANK0  003F
+reset_vec                           reset_vec    0000
+saved_w                             (abs)        007E
+start                               init         0010
+start_initialization                cinit        0013
+wtemp0                              (abs)        007E
+
+
+MODULE INFORMATION
+
+Module		Function		Class		Link	Load	Size
+RS485_ModbusRTU_master.c
+		_modbusReadCoils		CODE           	05C6	0000	121
+		_modbusWriteCoils		CODE           	052F	0000	151
+		_modbusReadRegisters		CODE           	063F	0000	116
+		_modbusWriteRegisters		CODE           	045C	0000	211
+		_modbusWriteRegister		CODE           	0782	0000	85
+		_modbusWriteCoil		CODE           	071C	0000	102
+		_modbusRTUInit 		CODE           	0F48	0000	6
+		_modbusRcvResponse		CODE           	0F76	0000	18
+		_clearBuffer   		CODE           	00CC	0000	30
+
+RS485_ModbusRTU_master.c estimated size: 840
+
+C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\awdiv.c
+		___awdiv       		CODE           	06B3	0000	105
+
+C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\awdiv.c estimated size: 105
+
+PIC16F877A_RS485.c
+		_RS485TxConfig 		CODE           	0F4E	0000	7
+		_RS485rcvString		CODE           	0F9B	0000	23
+		_RS485sendString		CODE           	0FB2	0000	24
+		_RS485Init     		CODE           	0F5D	0000	11
+
+PIC16F877A_RS485.c estimated size: 65
+
+shared
+		__stringtab    		STRCODE        	0100	0000	18
+		_wCRCTable     		STRCODE        	0112	0000	512
+		__initialization		CODE           	0013	0000	30
+
+shared estimated size: 560
+
+CRC.c
+		_crc16         		CODE           	0082	0000	74
+
+CRC.c estimated size: 74
+
+PIC16F877A_UART.c
+		_UARTrcvChar   		CODE           	0F42	0000	6
+		_UARTrcvString 		CODE           	0035	0000	77
+		_UARTsendChar  		CODE           	0F68	0000	14
+		_UARTsendString		CODE           	07D7	0000	37
+		_UARTTransRcvInit		CODE           	0FE3	0000	29
+
+PIC16F877A_UART.c estimated size: 163
+
+PIC16F877A_RS485_ModbusRTU_master.c
+		_ISR           		CODE           	00EA	0000	21
+		_main          		CODE           	0312	0000	330
+
+PIC16F877A_RS485_ModbusRTU_master.c estimated size: 351
+

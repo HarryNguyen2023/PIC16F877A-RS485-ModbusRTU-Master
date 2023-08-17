@@ -7,7 +7,8 @@
       <itemPath>PIC16F877A_UART.h</itemPath>
       <itemPath>config.h</itemPath>
       <itemPath>PIC16F877A_RS485.h</itemPath>
-      <itemPath>RS485_ModbusRTU.h</itemPath>
+      <itemPath>CRC.h</itemPath>
+      <itemPath>RS485_ModbusRTU_master.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -18,7 +19,9 @@
                    projectFiles="true">
       <itemPath>PIC16F877A_UART.c</itemPath>
       <itemPath>PIC16F877A_RS485.c</itemPath>
-      <itemPath>RS485_ModbusRTU.c</itemPath>
+      <itemPath>PIC16F877A_RS485_ModbusRTU_master.c</itemPath>
+      <itemPath>CRC.c</itemPath>
+      <itemPath>RS485_ModbusRTU_master.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

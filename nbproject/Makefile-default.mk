@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=PIC16F877A_UART.c PIC16F877A_RS485.c RS485_ModbusRTU.c
+SOURCEFILES_QUOTED_IF_SPACED=PIC16F877A_UART.c PIC16F877A_RS485.c PIC16F877A_RS485_ModbusRTU_master.c CRC.c RS485_ModbusRTU_master.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/PIC16F877A_UART.p1 ${OBJECTDIR}/PIC16F877A_RS485.p1 ${OBJECTDIR}/RS485_ModbusRTU.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/PIC16F877A_UART.p1.d ${OBJECTDIR}/PIC16F877A_RS485.p1.d ${OBJECTDIR}/RS485_ModbusRTU.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/PIC16F877A_UART.p1 ${OBJECTDIR}/PIC16F877A_RS485.p1 ${OBJECTDIR}/PIC16F877A_RS485_ModbusRTU_master.p1 ${OBJECTDIR}/CRC.p1 ${OBJECTDIR}/RS485_ModbusRTU_master.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/PIC16F877A_UART.p1.d ${OBJECTDIR}/PIC16F877A_RS485.p1.d ${OBJECTDIR}/PIC16F877A_RS485_ModbusRTU_master.p1.d ${OBJECTDIR}/CRC.p1.d ${OBJECTDIR}/RS485_ModbusRTU_master.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/PIC16F877A_UART.p1 ${OBJECTDIR}/PIC16F877A_RS485.p1 ${OBJECTDIR}/RS485_ModbusRTU.p1
+OBJECTFILES=${OBJECTDIR}/PIC16F877A_UART.p1 ${OBJECTDIR}/PIC16F877A_RS485.p1 ${OBJECTDIR}/PIC16F877A_RS485_ModbusRTU_master.p1 ${OBJECTDIR}/CRC.p1 ${OBJECTDIR}/RS485_ModbusRTU_master.p1
 
 # Source Files
-SOURCEFILES=PIC16F877A_UART.c PIC16F877A_RS485.c RS485_ModbusRTU.c
+SOURCEFILES=PIC16F877A_UART.c PIC16F877A_RS485.c PIC16F877A_RS485_ModbusRTU_master.c CRC.c RS485_ModbusRTU_master.c
 
 
 
@@ -104,13 +104,29 @@ ${OBJECTDIR}/PIC16F877A_RS485.p1: PIC16F877A_RS485.c  nbproject/Makefile-${CND_C
 	@-${MV} ${OBJECTDIR}/PIC16F877A_RS485.d ${OBJECTDIR}/PIC16F877A_RS485.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/PIC16F877A_RS485.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/RS485_ModbusRTU.p1: RS485_ModbusRTU.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/PIC16F877A_RS485_ModbusRTU_master.p1: PIC16F877A_RS485_ModbusRTU_master.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/RS485_ModbusRTU.p1.d 
-	@${RM} ${OBJECTDIR}/RS485_ModbusRTU.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/RS485_ModbusRTU.p1 RS485_ModbusRTU.c 
-	@-${MV} ${OBJECTDIR}/RS485_ModbusRTU.d ${OBJECTDIR}/RS485_ModbusRTU.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/RS485_ModbusRTU.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	@${RM} ${OBJECTDIR}/PIC16F877A_RS485_ModbusRTU_master.p1.d 
+	@${RM} ${OBJECTDIR}/PIC16F877A_RS485_ModbusRTU_master.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/PIC16F877A_RS485_ModbusRTU_master.p1 PIC16F877A_RS485_ModbusRTU_master.c 
+	@-${MV} ${OBJECTDIR}/PIC16F877A_RS485_ModbusRTU_master.d ${OBJECTDIR}/PIC16F877A_RS485_ModbusRTU_master.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/PIC16F877A_RS485_ModbusRTU_master.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/CRC.p1: CRC.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/CRC.p1.d 
+	@${RM} ${OBJECTDIR}/CRC.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/CRC.p1 CRC.c 
+	@-${MV} ${OBJECTDIR}/CRC.d ${OBJECTDIR}/CRC.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/CRC.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/RS485_ModbusRTU_master.p1: RS485_ModbusRTU_master.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/RS485_ModbusRTU_master.p1.d 
+	@${RM} ${OBJECTDIR}/RS485_ModbusRTU_master.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/RS485_ModbusRTU_master.p1 RS485_ModbusRTU_master.c 
+	@-${MV} ${OBJECTDIR}/RS485_ModbusRTU_master.d ${OBJECTDIR}/RS485_ModbusRTU_master.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/RS485_ModbusRTU_master.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 else
 ${OBJECTDIR}/PIC16F877A_UART.p1: PIC16F877A_UART.c  nbproject/Makefile-${CND_CONF}.mk 
@@ -129,13 +145,29 @@ ${OBJECTDIR}/PIC16F877A_RS485.p1: PIC16F877A_RS485.c  nbproject/Makefile-${CND_C
 	@-${MV} ${OBJECTDIR}/PIC16F877A_RS485.d ${OBJECTDIR}/PIC16F877A_RS485.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/PIC16F877A_RS485.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/RS485_ModbusRTU.p1: RS485_ModbusRTU.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/PIC16F877A_RS485_ModbusRTU_master.p1: PIC16F877A_RS485_ModbusRTU_master.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/RS485_ModbusRTU.p1.d 
-	@${RM} ${OBJECTDIR}/RS485_ModbusRTU.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/RS485_ModbusRTU.p1 RS485_ModbusRTU.c 
-	@-${MV} ${OBJECTDIR}/RS485_ModbusRTU.d ${OBJECTDIR}/RS485_ModbusRTU.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/RS485_ModbusRTU.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	@${RM} ${OBJECTDIR}/PIC16F877A_RS485_ModbusRTU_master.p1.d 
+	@${RM} ${OBJECTDIR}/PIC16F877A_RS485_ModbusRTU_master.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/PIC16F877A_RS485_ModbusRTU_master.p1 PIC16F877A_RS485_ModbusRTU_master.c 
+	@-${MV} ${OBJECTDIR}/PIC16F877A_RS485_ModbusRTU_master.d ${OBJECTDIR}/PIC16F877A_RS485_ModbusRTU_master.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/PIC16F877A_RS485_ModbusRTU_master.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/CRC.p1: CRC.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/CRC.p1.d 
+	@${RM} ${OBJECTDIR}/CRC.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/CRC.p1 CRC.c 
+	@-${MV} ${OBJECTDIR}/CRC.d ${OBJECTDIR}/CRC.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/CRC.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/RS485_ModbusRTU_master.p1: RS485_ModbusRTU_master.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/RS485_ModbusRTU_master.p1.d 
+	@${RM} ${OBJECTDIR}/RS485_ModbusRTU_master.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/RS485_ModbusRTU_master.p1 RS485_ModbusRTU_master.c 
+	@-${MV} ${OBJECTDIR}/RS485_ModbusRTU_master.d ${OBJECTDIR}/RS485_ModbusRTU_master.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/RS485_ModbusRTU_master.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 

@@ -1,5 +1,7 @@
 #include "PIC16F877A_RS485.h"
 
+#define _XTAL_FREQ 16000000
+
 // --------------------------------Static private functions hidden from user------------------------------------------------
 
 // Function to config the TX_EN pin connect to the transceiver
@@ -29,6 +31,8 @@ void RS485sendChar(char c)
     RS485_TX_EN = 1;
     // Send the character via UART
     UARTsendChar(c);
+    // Delay a few micro second for sending finish
+    __delay_us(200);
     // Disable transmission line
     RS485_TX_EN = 0;
 }
@@ -40,6 +44,8 @@ void RS485sendString(char* str)
     RS485_TX_EN = 1;
     // Send the character via UART
     UARTsendString(str);
+    // Delay a few micro second for sending finish
+    __delay_us(500);
     // Disable transmission line
     RS485_TX_EN = 0;
 }

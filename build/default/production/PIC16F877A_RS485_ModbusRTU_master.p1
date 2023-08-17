@@ -1,0 +1,500 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[t ~ __interrupt . k ]
+[t T1 __interrupt ]
+"2748 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 2748: extern volatile __bit RCIF __attribute__((address(0x65)));
+[v _RCIF `Vb ~T0 @X0 0 e@101 ]
+"33 ./RS485_ModbusRTU_master.h
+[; ;./RS485_ModbusRTU_master.h: 33: int modbusRcvResponse(uint8_t *rcv_buffer);
+[v _modbusRcvResponse `(i ~T0 @X0 0 ef1`*uc ]
+[p mainexit ]
+"25
+[; ;./RS485_ModbusRTU_master.h: 25: void modbusRTUInit(void);
+[v _modbusRTUInit `(v ~T0 @X0 0 ef ]
+"27
+[; ;./RS485_ModbusRTU_master.h: 27: uint8_t modbusReadCoils(uint8_t *tx_buffer, uint16_t len, uint8_t mode, uint8_t slave_address, uint16_t start_coil, uint16_t coil_num);
+[v _modbusReadCoils `(uc ~T0 @X0 0 ef6`*uc`ui`uc`uc`ui`ui ]
+"41 PIC16F877A_RS485_ModbusRTU_master.c
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 41:                 if(! modbusReadCoils(tx_buffer, 25, READ_COILS, 0x05, 1005, 7))
+[c E902 1 2 3 4 .. ]
+[n E902 modbusRTU_mode READ_COILS READ_DISCRETE_INPUTS READ_HOLDING_REGISTERS READ_INPUT_REGISTERS  ]
+"12 ./PIC16F877A_RS485.h
+[; ;./PIC16F877A_RS485.h: 12: void RS485sendString(char* str);
+[v _RS485sendString `(v ~T0 @X0 0 ef1`*uc ]
+"28 ./RS485_ModbusRTU_master.h
+[; ;./RS485_ModbusRTU_master.h: 28: uint8_t modbusReadRegisters(uint8_t *tx_buffer, uint16_t len, uint8_t mode, uint8_t slave_address, uint16_t start_register, uint16_t register_num);
+[v _modbusReadRegisters `(uc ~T0 @X0 0 ef6`*uc`ui`uc`uc`ui`ui ]
+"29
+[; ;./RS485_ModbusRTU_master.h: 29: uint8_t modbusWriteCoil(uint8_t *tx_buffer, uint16_t len, uint8_t slave_address, uint16_t coil, uint8_t coil_state);
+[v _modbusWriteCoil `(uc ~T0 @X0 0 ef5`*uc`ui`uc`ui`uc ]
+"57 PIC16F877A_RS485_ModbusRTU_master.c
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 57:                 if(! modbusWriteCoil(tx_buffer, 25, 0x05, 1003, COIL_ON))
+[c E907 0 1 .. ]
+[n E907 coil_status COIL_ON COIL_OFF  ]
+"30 ./RS485_ModbusRTU_master.h
+[; ;./RS485_ModbusRTU_master.h: 30: uint8_t modbusWriteRegister(uint8_t *tx_buffer, uint16_t len, uint8_t slave_address, uint16_t register_, uint16_t register_value);
+[v _modbusWriteRegister `(uc ~T0 @X0 0 ef5`*uc`ui`uc`ui`ui ]
+"31
+[; ;./RS485_ModbusRTU_master.h: 31: uint8_t modbusWriteCoils(uint8_t *tx_buffer, uint16_t len, uint8_t slave_address, uint16_t start_coil, uint16_t coil_num, uint8_t *coil_state);
+[v _modbusWriteCoils `(uc ~T0 @X0 0 ef6`*uc`ui`uc`ui`ui`*uc ]
+"32
+[; ;./RS485_ModbusRTU_master.h: 32: uint8_t modbusWriteRegisters(uint8_t *tx_buffer, uint16_t len, uint8_t slave_address, uint16_t start_register, uint16_t register_num, uint16_t *register_value);
+[v _modbusWriteRegisters `(uc ~T0 @X0 0 ef6`*uc`ui`uc`ui`ui`*ui ]
+[v F36 `(v ~T0 @X0 1 tf1`ul ]
+"12 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\builtins.h
+[v __delay `JF36 ~T0 @X0 0 e ]
+[p i __delay ]
+"5 ./config.h
+[p x FOSC  =  HS         ]
+"6
+[p x WDTE  =  OFF        ]
+"7
+[p x PWRTE  =  OFF       ]
+"8
+[p x BOREN  =  ON        ]
+"9
+[p x LVP  =  ON          ]
+"10
+[p x CPD  =  OFF         ]
+"11
+[p x WRT  =  OFF         ]
+"12
+[p x CP  =  OFF          ]
+"55 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 55: __asm("INDF equ 00h");
+[; <" INDF equ 00h ;# ">
+"62
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 62: __asm("TMR0 equ 01h");
+[; <" TMR0 equ 01h ;# ">
+"69
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 69: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"76
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 76: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"162
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 162: __asm("FSR equ 04h");
+[; <" FSR equ 04h ;# ">
+"169
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 169: __asm("PORTA equ 05h");
+[; <" PORTA equ 05h ;# ">
+"219
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 219: __asm("PORTB equ 06h");
+[; <" PORTB equ 06h ;# ">
+"281
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 281: __asm("PORTC equ 07h");
+[; <" PORTC equ 07h ;# ">
+"343
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 343: __asm("PORTD equ 08h");
+[; <" PORTD equ 08h ;# ">
+"405
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 405: __asm("PORTE equ 09h");
+[; <" PORTE equ 09h ;# ">
+"437
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 437: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"457
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 457: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"535
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 535: __asm("PIR1 equ 0Ch");
+[; <" PIR1 equ 0Ch ;# ">
+"597
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 597: __asm("PIR2 equ 0Dh");
+[; <" PIR2 equ 0Dh ;# ">
+"637
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 637: __asm("TMR1 equ 0Eh");
+[; <" TMR1 equ 0Eh ;# ">
+"644
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 644: __asm("TMR1L equ 0Eh");
+[; <" TMR1L equ 0Eh ;# ">
+"651
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 651: __asm("TMR1H equ 0Fh");
+[; <" TMR1H equ 0Fh ;# ">
+"658
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 658: __asm("T1CON equ 010h");
+[; <" T1CON equ 010h ;# ">
+"733
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 733: __asm("TMR2 equ 011h");
+[; <" TMR2 equ 011h ;# ">
+"740
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 740: __asm("T2CON equ 012h");
+[; <" T2CON equ 012h ;# ">
+"811
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 811: __asm("SSPBUF equ 013h");
+[; <" SSPBUF equ 013h ;# ">
+"818
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 818: __asm("SSPCON equ 014h");
+[; <" SSPCON equ 014h ;# ">
+"888
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 888: __asm("CCPR1 equ 015h");
+[; <" CCPR1 equ 015h ;# ">
+"895
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 895: __asm("CCPR1L equ 015h");
+[; <" CCPR1L equ 015h ;# ">
+"902
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 902: __asm("CCPR1H equ 016h");
+[; <" CCPR1H equ 016h ;# ">
+"909
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 909: __asm("CCP1CON equ 017h");
+[; <" CCP1CON equ 017h ;# ">
+"967
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 967: __asm("RCSTA equ 018h");
+[; <" RCSTA equ 018h ;# ">
+"1062
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1062: __asm("TXREG equ 019h");
+[; <" TXREG equ 019h ;# ">
+"1069
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1069: __asm("RCREG equ 01Ah");
+[; <" RCREG equ 01Ah ;# ">
+"1076
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1076: __asm("CCPR2 equ 01Bh");
+[; <" CCPR2 equ 01Bh ;# ">
+"1083
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1083: __asm("CCPR2L equ 01Bh");
+[; <" CCPR2L equ 01Bh ;# ">
+"1090
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1090: __asm("CCPR2H equ 01Ch");
+[; <" CCPR2H equ 01Ch ;# ">
+"1097
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1097: __asm("CCP2CON equ 01Dh");
+[; <" CCP2CON equ 01Dh ;# ">
+"1155
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1155: __asm("ADRESH equ 01Eh");
+[; <" ADRESH equ 01Eh ;# ">
+"1162
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1162: __asm("ADCON0 equ 01Fh");
+[; <" ADCON0 equ 01Fh ;# ">
+"1258
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1258: __asm("OPTION_REG equ 081h");
+[; <" OPTION_REG equ 081h ;# ">
+"1328
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1328: __asm("TRISA equ 085h");
+[; <" TRISA equ 085h ;# ">
+"1378
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1378: __asm("TRISB equ 086h");
+[; <" TRISB equ 086h ;# ">
+"1440
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1440: __asm("TRISC equ 087h");
+[; <" TRISC equ 087h ;# ">
+"1502
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1502: __asm("TRISD equ 088h");
+[; <" TRISD equ 088h ;# ">
+"1564
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1564: __asm("TRISE equ 089h");
+[; <" TRISE equ 089h ;# ">
+"1621
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1621: __asm("PIE1 equ 08Ch");
+[; <" PIE1 equ 08Ch ;# ">
+"1683
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1683: __asm("PIE2 equ 08Dh");
+[; <" PIE2 equ 08Dh ;# ">
+"1723
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1723: __asm("PCON equ 08Eh");
+[; <" PCON equ 08Eh ;# ">
+"1757
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1757: __asm("SSPCON2 equ 091h");
+[; <" SSPCON2 equ 091h ;# ">
+"1819
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1819: __asm("PR2 equ 092h");
+[; <" PR2 equ 092h ;# ">
+"1826
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1826: __asm("SSPADD equ 093h");
+[; <" SSPADD equ 093h ;# ">
+"1833
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1833: __asm("SSPSTAT equ 094h");
+[; <" SSPSTAT equ 094h ;# ">
+"2002
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 2002: __asm("TXSTA equ 098h");
+[; <" TXSTA equ 098h ;# ">
+"2083
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 2083: __asm("SPBRG equ 099h");
+[; <" SPBRG equ 099h ;# ">
+"2090
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 2090: __asm("CMCON equ 09Ch");
+[; <" CMCON equ 09Ch ;# ">
+"2160
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 2160: __asm("CVRCON equ 09Dh");
+[; <" CVRCON equ 09Dh ;# ">
+"2225
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 2225: __asm("ADRESL equ 09Eh");
+[; <" ADRESL equ 09Eh ;# ">
+"2232
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 2232: __asm("ADCON1 equ 09Fh");
+[; <" ADCON1 equ 09Fh ;# ">
+"2291
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 2291: __asm("EEDATA equ 010Ch");
+[; <" EEDATA equ 010Ch ;# ">
+"2298
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 2298: __asm("EEADR equ 010Dh");
+[; <" EEADR equ 010Dh ;# ">
+"2305
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 2305: __asm("EEDATH equ 010Eh");
+[; <" EEDATH equ 010Eh ;# ">
+"2312
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 2312: __asm("EEADRH equ 010Fh");
+[; <" EEADRH equ 010Fh ;# ">
+"2319
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 2319: __asm("EECON1 equ 018Ch");
+[; <" EECON1 equ 018Ch ;# ">
+"2364
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 2364: __asm("EECON2 equ 018Dh");
+[; <" EECON2 equ 018Dh ;# ">
+"10 ./PIC16F877A_UART.h
+[; ;./PIC16F877A_UART.h: 10: static uint16_t uart_str_idx = 0;
+[v _uart_str_idx `ui ~T0 @X0 1 s ]
+[i _uart_str_idx
+-> -> 0 `i `ui
+]
+"23 ./RS485_ModbusRTU_master.h
+[; ;./RS485_ModbusRTU_master.h: 23: uint16_t master_rcv_buffer_len;
+[v _master_rcv_buffer_len `ui ~T0 @X0 1 e ]
+"9 PIC16F877A_RS485_ModbusRTU_master.c
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 9: uint8_t tx_buffer[25];
+[v _tx_buffer `uc ~T0 @X0 -> 25 `i e ]
+"10
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 10: uint8_t rcv_buffer[25];
+[v _rcv_buffer `uc ~T0 @X0 -> 25 `i e ]
+"11
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 11: char error_msg[] = "Transmission error";
+[v _error_msg `uc ~T0 @X0 -> 19 `i e ]
+[i _error_msg
+:U ..
+-> 84 `c
+-> 114 `c
+-> 97 `c
+-> 110 `c
+-> 115 `c
+-> 109 `c
+-> 105 `c
+-> 115 `c
+-> 115 `c
+-> 105 `c
+-> 111 `c
+-> 110 `c
+-> 32 `c
+-> 101 `c
+-> 114 `c
+-> 114 `c
+-> 111 `c
+-> 114 `c
+-> 0 `c
+..
+]
+"14
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 14: uint8_t coil_write_state[] = {0xCD, 0x21};
+[v _coil_write_state `uc ~T0 @X0 -> 2 `i e ]
+[i _coil_write_state
+:U ..
+-> -> 205 `i `uc
+-> -> 33 `i `uc
+..
+]
+"15
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 15: uint16_t register_write_buffer[] = {113, 48};
+[v _register_write_buffer `ui ~T0 @X0 -> 2 `i e ]
+[i _register_write_buffer
+:U ..
+-> -> 113 `i `ui
+-> -> 48 `i `ui
+..
+]
+"16
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 16: uint8_t state = 0;
+[v _state `uc ~T0 @X0 1 e ]
+[i _state
+-> -> 0 `i `uc
+]
+[v $root$_ISR `(v ~T0 @X0 0 e ]
+"19
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 19: void __attribute__((picinterrupt(("")))) ISR(void)
+[v _ISR `(v ~T1 @X0 1 ef ]
+"20
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 20: {
+{
+[e :U _ISR ]
+[f ]
+"22
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 22:     if(RCIF)
+[e $ ! _RCIF 96  ]
+"23
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 23:     {
+{
+"24
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 24:         if(modbusRcvResponse(rcv_buffer))
+[e $ ! != ( _modbusRcvResponse (1 &U _rcv_buffer -> 0 `i 97  ]
+"25
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 25:         {
+{
+"27
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 27:         }
+}
+[e :U 97 ]
+"28
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 28:     }
+}
+[e :U 96 ]
+"29
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 29: }
+[e :UE 95 ]
+}
+[v $root$_main `(v ~T0 @X0 0 e ]
+"31
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 31: void main(void) {
+[v _main `(v ~T0 @X0 1 ef ]
+{
+[e :U _main ]
+[f ]
+"33
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 33:     modbusRTUInit();
+[e ( _modbusRTUInit ..  ]
+"36
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 36:     while(1)
+[e :U 100 ]
+"37
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 37:     {
+{
+"38
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 38:         switch(state++)
+[e $U 103  ]
+"39
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 39:         {
+{
+"40
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 40:             case 0:
+[e :U 104 ]
+"41
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 41:                 if(! modbusReadCoils(tx_buffer, 25, READ_COILS, 0x05, 1005, 7))
+[e $ ! ! != -> ( _modbusReadCoils (4 , , , , , &U _tx_buffer -> -> 25 `i `ui -> . `E902 0 `uc -> -> 5 `i `uc -> -> 1005 `i `ui -> -> 7 `i `ui `i -> 0 `i 105  ]
+"42
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 42:                     RS485sendString(error_msg);
+[e ( _RS485sendString (1 &U _error_msg ]
+[e :U 105 ]
+"43
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 43:                 break;
+[e $U 102  ]
+"44
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 44:             case 1:
+[e :U 106 ]
+"45
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 45:                 if(! modbusReadCoils(tx_buffer, 25, READ_DISCRETE_INPUTS, 0x05, 1001, 7))
+[e $ ! ! != -> ( _modbusReadCoils (4 , , , , , &U _tx_buffer -> -> 25 `i `ui -> . `E902 1 `uc -> -> 5 `i `uc -> -> 1001 `i `ui -> -> 7 `i `ui `i -> 0 `i 107  ]
+"46
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 46:                     RS485sendString(error_msg);
+[e ( _RS485sendString (1 &U _error_msg ]
+[e :U 107 ]
+"47
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 47:                 break;
+[e $U 102  ]
+"48
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 48:             case 2:
+[e :U 108 ]
+"49
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 49:                 if(! modbusReadRegisters(tx_buffer, 25, READ_HOLDING_REGISTERS, 0x05, 4003, 3))
+[e $ ! ! != -> ( _modbusReadRegisters (4 , , , , , &U _tx_buffer -> -> 25 `i `ui -> . `E902 2 `uc -> -> 5 `i `uc -> -> 4003 `i `ui -> -> 3 `i `ui `i -> 0 `i 109  ]
+"50
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 50:                     RS485sendString(error_msg);
+[e ( _RS485sendString (1 &U _error_msg ]
+[e :U 109 ]
+"51
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 51:                 break;
+[e $U 102  ]
+"52
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 52:             case 3:
+[e :U 110 ]
+"53
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 53:                 if(! modbusReadRegisters(tx_buffer, 25, READ_INPUT_REGISTERS, 0x05, 4005, 2))
+[e $ ! ! != -> ( _modbusReadRegisters (4 , , , , , &U _tx_buffer -> -> 25 `i `ui -> . `E902 3 `uc -> -> 5 `i `uc -> -> 4005 `i `ui -> -> 2 `i `ui `i -> 0 `i 111  ]
+"54
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 54:                     RS485sendString(error_msg);
+[e ( _RS485sendString (1 &U _error_msg ]
+[e :U 111 ]
+"55
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 55:                 break;
+[e $U 102  ]
+"56
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 56:             case 4:
+[e :U 112 ]
+"57
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 57:                 if(! modbusWriteCoil(tx_buffer, 25, 0x05, 1003, COIL_ON))
+[e $ ! ! != -> ( _modbusWriteCoil (4 , , , , &U _tx_buffer -> -> 25 `i `ui -> -> 5 `i `uc -> -> 1003 `i `ui -> . `E907 0 `uc `i -> 0 `i 113  ]
+"58
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 58:                     RS485sendString(error_msg);
+[e ( _RS485sendString (1 &U _error_msg ]
+[e :U 113 ]
+"59
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 59:                 break;
+[e $U 102  ]
+"60
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 60:             case 5:
+[e :U 114 ]
+"61
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 61:                 if(! modbusWriteRegister(tx_buffer, 25, 0x05, 4001, 15))
+[e $ ! ! != -> ( _modbusWriteRegister (4 , , , , &U _tx_buffer -> -> 25 `i `ui -> -> 5 `i `uc -> -> 4001 `i `ui -> -> 15 `i `ui `i -> 0 `i 115  ]
+"62
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 62:                     RS485sendString(error_msg);
+[e ( _RS485sendString (1 &U _error_msg ]
+[e :U 115 ]
+"63
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 63:                 break;
+[e $U 102  ]
+"64
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 64:             case 6:
+[e :U 116 ]
+"65
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 65:                 if(! modbusWriteCoils(tx_buffer, 25, 0x05, 1001, 13, coil_write_state))
+[e $ ! ! != -> ( _modbusWriteCoils (4 , , , , , &U _tx_buffer -> -> 25 `i `ui -> -> 5 `i `uc -> -> 1001 `i `ui -> -> 13 `i `ui &U _coil_write_state `i -> 0 `i 117  ]
+"66
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 66:                     RS485sendString(error_msg);
+[e ( _RS485sendString (1 &U _error_msg ]
+[e :U 117 ]
+"67
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 67:                 break;
+[e $U 102  ]
+"68
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 68:              case 7:
+[e :U 118 ]
+"69
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 69:                 state = 0;
+[e = _state -> -> 0 `i `uc ]
+"70
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 70:                 if(! modbusWriteRegisters(tx_buffer, 25, 0x05, 4002, 2, register_write_buffer))
+[e $ ! ! != -> ( _modbusWriteRegisters (4 , , , , , &U _tx_buffer -> -> 25 `i `ui -> -> 5 `i `uc -> -> 4002 `i `ui -> -> 2 `i `ui &U _register_write_buffer `i -> 0 `i 119  ]
+"71
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 71:                     RS485sendString(error_msg);
+[e ( _RS485sendString (1 &U _error_msg ]
+[e :U 119 ]
+"72
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 72:                 break;
+[e $U 102  ]
+"73
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 73:         }
+}
+[e $U 102  ]
+[e :U 103 ]
+[e [\ -> ++ _state -> -> 1 `i `uc `i , $ -> 0 `i 104
+ , $ -> 1 `i 106
+ , $ -> 2 `i 108
+ , $ -> 3 `i 110
+ , $ -> 4 `i 112
+ , $ -> 5 `i 114
+ , $ -> 6 `i 116
+ , $ -> 7 `i 118
+ 102 ]
+[e :U 102 ]
+"74
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 74:         _delay((unsigned long)((1000)*(16000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
+"75
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 75:     }
+}
+[e :U 99 ]
+[e $U 100  ]
+[e :U 101 ]
+"77
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 77:     return;
+[e $UE 98  ]
+"78
+[; ;PIC16F877A_RS485_ModbusRTU_master.c: 78: }
+[e :UE 98 ]
+}

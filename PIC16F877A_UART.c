@@ -96,15 +96,18 @@ char UARTrcvChar()
 // Function to receive string via UART interrupt
 int UARTrcvString(char *rcv_buffer, uint16_t length)
 {
-    if (uart_str_idx == length)
+    if (uart_str_idx == length - 1)
     {
+        rcv_buffer[uart_str_idx] = UARTrcvChar();
+        uart_str_idx++;
         rcv_buffer[uart_str_idx] = '\0';
         uart_str_idx = 0;
         return 1;
     }
     else
     {
-        rcv_buffer[uart_str_idx++] = UARTrcvChar();
+        rcv_buffer[uart_str_idx] = UARTrcvChar();
+        uart_str_idx++;
         return 0;
     }
 }

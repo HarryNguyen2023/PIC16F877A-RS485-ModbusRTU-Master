@@ -1,0 +1,828 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"10 ./PIC16F877A_RS485.h
+[; ;./PIC16F877A_RS485.h: 10: void RS485Init(void);
+[v _RS485Init `(v ~T0 @X0 0 ef ]
+"28 RS485_ModbusRTU_master.c
+[; ;RS485_ModbusRTU_master.c: 28:     if (mode == READ_COILS)
+[c E902 1 2 3 4 .. ]
+[n E902 modbusRTU_mode READ_COILS READ_DISCRETE_INPUTS READ_HOLDING_REGISTERS READ_INPUT_REGISTERS  ]
+"6 ./CRC.h
+[; ;./CRC.h: 6: uint16_t crc16(uint8_t* buffer, uint16_t length);
+[v _crc16 `(ui ~T0 @X0 0 ef2`*uc`ui ]
+"12 ./PIC16F877A_RS485.h
+[; ;./PIC16F877A_RS485.h: 12: void RS485sendString(char* str);
+[v _RS485sendString `(v ~T0 @X0 0 ef1`*uc ]
+"112 RS485_ModbusRTU_master.c
+[; ;RS485_ModbusRTU_master.c: 112:     if (coil_state == COIL_ON)
+[c E907 0 1 .. ]
+[n E907 coil_status COIL_ON COIL_OFF  ]
+"14 ./PIC16F877A_RS485.h
+[; ;./PIC16F877A_RS485.h: 14: int RS485rcvString(char* rcv_buffer, uint16_t length);
+[v _RS485rcvString `(i ~T0 @X0 0 ef2`*uc`ui ]
+"55 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 55: __asm("INDF equ 00h");
+[; <" INDF equ 00h ;# ">
+"62
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 62: __asm("TMR0 equ 01h");
+[; <" TMR0 equ 01h ;# ">
+"69
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 69: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"76
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 76: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"162
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 162: __asm("FSR equ 04h");
+[; <" FSR equ 04h ;# ">
+"169
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 169: __asm("PORTA equ 05h");
+[; <" PORTA equ 05h ;# ">
+"219
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 219: __asm("PORTB equ 06h");
+[; <" PORTB equ 06h ;# ">
+"281
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 281: __asm("PORTC equ 07h");
+[; <" PORTC equ 07h ;# ">
+"343
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 343: __asm("PORTD equ 08h");
+[; <" PORTD equ 08h ;# ">
+"405
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 405: __asm("PORTE equ 09h");
+[; <" PORTE equ 09h ;# ">
+"437
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 437: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"457
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 457: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"535
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 535: __asm("PIR1 equ 0Ch");
+[; <" PIR1 equ 0Ch ;# ">
+"597
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 597: __asm("PIR2 equ 0Dh");
+[; <" PIR2 equ 0Dh ;# ">
+"637
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 637: __asm("TMR1 equ 0Eh");
+[; <" TMR1 equ 0Eh ;# ">
+"644
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 644: __asm("TMR1L equ 0Eh");
+[; <" TMR1L equ 0Eh ;# ">
+"651
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 651: __asm("TMR1H equ 0Fh");
+[; <" TMR1H equ 0Fh ;# ">
+"658
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 658: __asm("T1CON equ 010h");
+[; <" T1CON equ 010h ;# ">
+"733
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 733: __asm("TMR2 equ 011h");
+[; <" TMR2 equ 011h ;# ">
+"740
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 740: __asm("T2CON equ 012h");
+[; <" T2CON equ 012h ;# ">
+"811
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 811: __asm("SSPBUF equ 013h");
+[; <" SSPBUF equ 013h ;# ">
+"818
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 818: __asm("SSPCON equ 014h");
+[; <" SSPCON equ 014h ;# ">
+"888
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 888: __asm("CCPR1 equ 015h");
+[; <" CCPR1 equ 015h ;# ">
+"895
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 895: __asm("CCPR1L equ 015h");
+[; <" CCPR1L equ 015h ;# ">
+"902
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 902: __asm("CCPR1H equ 016h");
+[; <" CCPR1H equ 016h ;# ">
+"909
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 909: __asm("CCP1CON equ 017h");
+[; <" CCP1CON equ 017h ;# ">
+"967
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 967: __asm("RCSTA equ 018h");
+[; <" RCSTA equ 018h ;# ">
+"1062
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1062: __asm("TXREG equ 019h");
+[; <" TXREG equ 019h ;# ">
+"1069
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1069: __asm("RCREG equ 01Ah");
+[; <" RCREG equ 01Ah ;# ">
+"1076
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1076: __asm("CCPR2 equ 01Bh");
+[; <" CCPR2 equ 01Bh ;# ">
+"1083
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1083: __asm("CCPR2L equ 01Bh");
+[; <" CCPR2L equ 01Bh ;# ">
+"1090
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1090: __asm("CCPR2H equ 01Ch");
+[; <" CCPR2H equ 01Ch ;# ">
+"1097
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1097: __asm("CCP2CON equ 01Dh");
+[; <" CCP2CON equ 01Dh ;# ">
+"1155
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1155: __asm("ADRESH equ 01Eh");
+[; <" ADRESH equ 01Eh ;# ">
+"1162
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1162: __asm("ADCON0 equ 01Fh");
+[; <" ADCON0 equ 01Fh ;# ">
+"1258
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1258: __asm("OPTION_REG equ 081h");
+[; <" OPTION_REG equ 081h ;# ">
+"1328
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1328: __asm("TRISA equ 085h");
+[; <" TRISA equ 085h ;# ">
+"1378
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1378: __asm("TRISB equ 086h");
+[; <" TRISB equ 086h ;# ">
+"1440
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1440: __asm("TRISC equ 087h");
+[; <" TRISC equ 087h ;# ">
+"1502
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1502: __asm("TRISD equ 088h");
+[; <" TRISD equ 088h ;# ">
+"1564
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1564: __asm("TRISE equ 089h");
+[; <" TRISE equ 089h ;# ">
+"1621
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1621: __asm("PIE1 equ 08Ch");
+[; <" PIE1 equ 08Ch ;# ">
+"1683
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1683: __asm("PIE2 equ 08Dh");
+[; <" PIE2 equ 08Dh ;# ">
+"1723
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1723: __asm("PCON equ 08Eh");
+[; <" PCON equ 08Eh ;# ">
+"1757
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1757: __asm("SSPCON2 equ 091h");
+[; <" SSPCON2 equ 091h ;# ">
+"1819
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1819: __asm("PR2 equ 092h");
+[; <" PR2 equ 092h ;# ">
+"1826
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1826: __asm("SSPADD equ 093h");
+[; <" SSPADD equ 093h ;# ">
+"1833
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1833: __asm("SSPSTAT equ 094h");
+[; <" SSPSTAT equ 094h ;# ">
+"2002
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 2002: __asm("TXSTA equ 098h");
+[; <" TXSTA equ 098h ;# ">
+"2083
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 2083: __asm("SPBRG equ 099h");
+[; <" SPBRG equ 099h ;# ">
+"2090
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 2090: __asm("CMCON equ 09Ch");
+[; <" CMCON equ 09Ch ;# ">
+"2160
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 2160: __asm("CVRCON equ 09Dh");
+[; <" CVRCON equ 09Dh ;# ">
+"2225
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 2225: __asm("ADRESL equ 09Eh");
+[; <" ADRESL equ 09Eh ;# ">
+"2232
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 2232: __asm("ADCON1 equ 09Fh");
+[; <" ADCON1 equ 09Fh ;# ">
+"2291
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 2291: __asm("EEDATA equ 010Ch");
+[; <" EEDATA equ 010Ch ;# ">
+"2298
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 2298: __asm("EEADR equ 010Dh");
+[; <" EEADR equ 010Dh ;# ">
+"2305
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 2305: __asm("EEDATH equ 010Eh");
+[; <" EEDATH equ 010Eh ;# ">
+"2312
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 2312: __asm("EEADRH equ 010Fh");
+[; <" EEADRH equ 010Fh ;# ">
+"2319
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 2319: __asm("EECON1 equ 018Ch");
+[; <" EECON1 equ 018Ch ;# ">
+"2364
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 2364: __asm("EECON2 equ 018Dh");
+[; <" EECON2 equ 018Dh ;# ">
+"10 ./PIC16F877A_UART.h
+[; ;./PIC16F877A_UART.h: 10: static uint16_t uart_str_idx = 0;
+[v _uart_str_idx `ui ~T0 @X0 1 s ]
+[i _uart_str_idx
+-> -> 0 `i `ui
+]
+"23 ./RS485_ModbusRTU_master.h
+[; ;./RS485_ModbusRTU_master.h: 23: uint16_t master_rcv_buffer_len;
+[v _master_rcv_buffer_len `ui ~T0 @X0 1 e ]
+"4 RS485_ModbusRTU_master.c
+[; ;RS485_ModbusRTU_master.c: 4: static void clearBuffer(uint8_t *buffer, uint16_t len)
+[v _clearBuffer `(v ~T0 @X0 1 sf2`*uc`ui ]
+"5
+[; ;RS485_ModbusRTU_master.c: 5: {
+{
+[e :U _clearBuffer ]
+"4
+[; ;RS485_ModbusRTU_master.c: 4: static void clearBuffer(uint8_t *buffer, uint16_t len)
+[v _buffer `*uc ~T0 @X0 1 r1 ]
+[v _len `ui ~T0 @X0 1 r2 ]
+"5
+[; ;RS485_ModbusRTU_master.c: 5: {
+[f ]
+"6
+[; ;RS485_ModbusRTU_master.c: 6:     for (uint8_t i = 0; i < len; ++i)
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $U 99  ]
+[e :U 96 ]
+"7
+[; ;RS485_ModbusRTU_master.c: 7:         buffer[i] = 0;
+[e = *U + _buffer * -> _i `ux -> -> # *U _buffer `ui `ux -> -> 0 `i `uc ]
+[e =+ _i -> -> 1 `i `uc ]
+[e :U 99 ]
+[e $ < -> _i `ui _len 96  ]
+[e :U 97 ]
+}
+"8
+[; ;RS485_ModbusRTU_master.c: 8: }
+[e :UE 95 ]
+}
+"13
+[; ;RS485_ModbusRTU_master.c: 13: void modbusRTUInit()
+[v _modbusRTUInit `(v ~T0 @X0 1 ef ]
+"14
+[; ;RS485_ModbusRTU_master.c: 14: {
+{
+[e :U _modbusRTUInit ]
+[f ]
+"15
+[; ;RS485_ModbusRTU_master.c: 15:     RS485Init();
+[e ( _RS485Init ..  ]
+"16
+[; ;RS485_ModbusRTU_master.c: 16: }
+[e :UE 100 ]
+}
+"19
+[; ;RS485_ModbusRTU_master.c: 19: uint8_t modbusReadCoils(uint8_t *tx_buffer, uint16_t len, uint8_t mode, uint8_t slave_address, uint16_t start_coil, uint16_t coil_num)
+[v _modbusReadCoils `(uc ~T0 @X0 1 ef6`*uc`ui`uc`uc`ui`ui ]
+"20
+[; ;RS485_ModbusRTU_master.c: 20: {
+{
+[e :U _modbusReadCoils ]
+"19
+[; ;RS485_ModbusRTU_master.c: 19: uint8_t modbusReadCoils(uint8_t *tx_buffer, uint16_t len, uint8_t mode, uint8_t slave_address, uint16_t start_coil, uint16_t coil_num)
+[v _tx_buffer `*uc ~T0 @X0 1 r1 ]
+[v _len `ui ~T0 @X0 1 r2 ]
+[v _mode `uc ~T0 @X0 1 r3 ]
+[v _slave_address `uc ~T0 @X0 1 r4 ]
+[v _start_coil `ui ~T0 @X0 1 r5 ]
+[v _coil_num `ui ~T0 @X0 1 r6 ]
+"20
+[; ;RS485_ModbusRTU_master.c: 20: {
+[f ]
+"22
+[; ;RS485_ModbusRTU_master.c: 22:     clearBuffer(tx_buffer, len);
+[e ( _clearBuffer (2 , _tx_buffer _len ]
+"25
+[; ;RS485_ModbusRTU_master.c: 25:     tx_buffer[0] = slave_address;
+[e = *U + _tx_buffer * -> -> 0 `i `x -> -> # *U _tx_buffer `i `x _slave_address ]
+"28
+[; ;RS485_ModbusRTU_master.c: 28:     if (mode == READ_COILS)
+[e $ ! == -> _mode `i -> . `E902 0 `i 102  ]
+"29
+[; ;RS485_ModbusRTU_master.c: 29:         tx_buffer[1] = READ_COILS;
+[e = *U + _tx_buffer * -> -> 1 `i `x -> -> # *U _tx_buffer `i `x -> . `E902 0 `uc ]
+[e $U 103  ]
+"30
+[; ;RS485_ModbusRTU_master.c: 30:     else if (mode == READ_DISCRETE_INPUTS)
+[e :U 102 ]
+[e $ ! == -> _mode `i -> . `E902 1 `i 104  ]
+"31
+[; ;RS485_ModbusRTU_master.c: 31:         tx_buffer[1] = READ_DISCRETE_INPUTS;
+[e = *U + _tx_buffer * -> -> 1 `i `x -> -> # *U _tx_buffer `i `x -> . `E902 1 `uc ]
+[e $U 105  ]
+"32
+[; ;RS485_ModbusRTU_master.c: 32:     else
+[e :U 104 ]
+"33
+[; ;RS485_ModbusRTU_master.c: 33:         return 0;
+[e ) -> -> 0 `i `uc ]
+[e $UE 101  ]
+[e :U 105 ]
+[e :U 103 ]
+"36
+[; ;RS485_ModbusRTU_master.c: 36:     tx_buffer[3] = start_coil & 0xFF;
+[e = *U + _tx_buffer * -> -> 3 `i `x -> -> # *U _tx_buffer `i `x -> & _start_coil -> -> 255 `i `ui `uc ]
+"37
+[; ;RS485_ModbusRTU_master.c: 37:     tx_buffer[2] = (start_coil >> 8) & 0xFF;
+[e = *U + _tx_buffer * -> -> 2 `i `x -> -> # *U _tx_buffer `i `x -> & >> _start_coil -> 8 `i -> -> 255 `i `ui `uc ]
+"40
+[; ;RS485_ModbusRTU_master.c: 40:     tx_buffer[5] = coil_num & 0xFF;
+[e = *U + _tx_buffer * -> -> 5 `i `x -> -> # *U _tx_buffer `i `x -> & _coil_num -> -> 255 `i `ui `uc ]
+"41
+[; ;RS485_ModbusRTU_master.c: 41:     tx_buffer[4] = (coil_num >> 8) & 0xFF;
+[e = *U + _tx_buffer * -> -> 4 `i `x -> -> # *U _tx_buffer `i `x -> & >> _coil_num -> 8 `i -> -> 255 `i `ui `uc ]
+"44
+[; ;RS485_ModbusRTU_master.c: 44:     uint16_t checksum = crc16(tx_buffer, 6);
+[v _checksum `ui ~T0 @X0 1 a ]
+[e = _checksum ( _crc16 (2 , _tx_buffer -> -> 6 `i `ui ]
+"45
+[; ;RS485_ModbusRTU_master.c: 45:     tx_buffer[6] = checksum & 0xFF;
+[e = *U + _tx_buffer * -> -> 6 `i `x -> -> # *U _tx_buffer `i `x -> & _checksum -> -> 255 `i `ui `uc ]
+"46
+[; ;RS485_ModbusRTU_master.c: 46:     tx_buffer[7] = (checksum >> 8) & 0xFF;
+[e = *U + _tx_buffer * -> -> 7 `i `x -> -> # *U _tx_buffer `i `x -> & >> _checksum -> 8 `i -> -> 255 `i `ui `uc ]
+"49
+[; ;RS485_ModbusRTU_master.c: 49:     RS485sendString((char *)tx_buffer);
+[e ( _RS485sendString (1 -> _tx_buffer `*uc ]
+"52
+[; ;RS485_ModbusRTU_master.c: 52:     master_rcv_buffer_len = 6 + (coil_num / 8);
+[e = _master_rcv_buffer_len + -> -> 6 `i `ui / _coil_num -> -> 8 `i `ui ]
+"53
+[; ;RS485_ModbusRTU_master.c: 53:     return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 101  ]
+"54
+[; ;RS485_ModbusRTU_master.c: 54: }
+[e :UE 101 ]
+}
+"57
+[; ;RS485_ModbusRTU_master.c: 57: uint8_t modbusReadRegisters(uint8_t *tx_buffer, uint16_t len, uint8_t mode, uint8_t slave_address, uint16_t start_register, uint16_t register_num)
+[v _modbusReadRegisters `(uc ~T0 @X0 1 ef6`*uc`ui`uc`uc`ui`ui ]
+"58
+[; ;RS485_ModbusRTU_master.c: 58: {
+{
+[e :U _modbusReadRegisters ]
+"57
+[; ;RS485_ModbusRTU_master.c: 57: uint8_t modbusReadRegisters(uint8_t *tx_buffer, uint16_t len, uint8_t mode, uint8_t slave_address, uint16_t start_register, uint16_t register_num)
+[v _tx_buffer `*uc ~T0 @X0 1 r1 ]
+[v _len `ui ~T0 @X0 1 r2 ]
+[v _mode `uc ~T0 @X0 1 r3 ]
+[v _slave_address `uc ~T0 @X0 1 r4 ]
+[v _start_register `ui ~T0 @X0 1 r5 ]
+[v _register_num `ui ~T0 @X0 1 r6 ]
+"58
+[; ;RS485_ModbusRTU_master.c: 58: {
+[f ]
+"60
+[; ;RS485_ModbusRTU_master.c: 60:     clearBuffer(tx_buffer, len);
+[e ( _clearBuffer (2 , _tx_buffer _len ]
+"63
+[; ;RS485_ModbusRTU_master.c: 63:     tx_buffer[0] = slave_address;
+[e = *U + _tx_buffer * -> -> 0 `i `x -> -> # *U _tx_buffer `i `x _slave_address ]
+"66
+[; ;RS485_ModbusRTU_master.c: 66:     if (mode == READ_HOLDING_REGISTERS)
+[e $ ! == -> _mode `i -> . `E902 2 `i 107  ]
+"67
+[; ;RS485_ModbusRTU_master.c: 67:         tx_buffer[1] = READ_HOLDING_REGISTERS;
+[e = *U + _tx_buffer * -> -> 1 `i `x -> -> # *U _tx_buffer `i `x -> . `E902 2 `uc ]
+[e $U 108  ]
+"68
+[; ;RS485_ModbusRTU_master.c: 68:     else if (mode == READ_INPUT_REGISTERS)
+[e :U 107 ]
+[e $ ! == -> _mode `i -> . `E902 3 `i 109  ]
+"69
+[; ;RS485_ModbusRTU_master.c: 69:         tx_buffer[1] = READ_INPUT_REGISTERS;
+[e = *U + _tx_buffer * -> -> 1 `i `x -> -> # *U _tx_buffer `i `x -> . `E902 3 `uc ]
+[e $U 110  ]
+"70
+[; ;RS485_ModbusRTU_master.c: 70:     else
+[e :U 109 ]
+"71
+[; ;RS485_ModbusRTU_master.c: 71:         return 0;
+[e ) -> -> 0 `i `uc ]
+[e $UE 106  ]
+[e :U 110 ]
+[e :U 108 ]
+"74
+[; ;RS485_ModbusRTU_master.c: 74:     tx_buffer[3] = start_register & 0xFF;
+[e = *U + _tx_buffer * -> -> 3 `i `x -> -> # *U _tx_buffer `i `x -> & _start_register -> -> 255 `i `ui `uc ]
+"75
+[; ;RS485_ModbusRTU_master.c: 75:     tx_buffer[2] = (start_register >> 8) & 0xFF;
+[e = *U + _tx_buffer * -> -> 2 `i `x -> -> # *U _tx_buffer `i `x -> & >> _start_register -> 8 `i -> -> 255 `i `ui `uc ]
+"78
+[; ;RS485_ModbusRTU_master.c: 78:     tx_buffer[5] = register_num & 0xFF;
+[e = *U + _tx_buffer * -> -> 5 `i `x -> -> # *U _tx_buffer `i `x -> & _register_num -> -> 255 `i `ui `uc ]
+"79
+[; ;RS485_ModbusRTU_master.c: 79:     tx_buffer[4] = (register_num >> 8) & 0xFF;
+[e = *U + _tx_buffer * -> -> 4 `i `x -> -> # *U _tx_buffer `i `x -> & >> _register_num -> 8 `i -> -> 255 `i `ui `uc ]
+"82
+[; ;RS485_ModbusRTU_master.c: 82:     uint16_t checksum = crc16(tx_buffer, 6);
+[v _checksum `ui ~T0 @X0 1 a ]
+[e = _checksum ( _crc16 (2 , _tx_buffer -> -> 6 `i `ui ]
+"83
+[; ;RS485_ModbusRTU_master.c: 83:     tx_buffer[6] = checksum & 0xFF;
+[e = *U + _tx_buffer * -> -> 6 `i `x -> -> # *U _tx_buffer `i `x -> & _checksum -> -> 255 `i `ui `uc ]
+"84
+[; ;RS485_ModbusRTU_master.c: 84:     tx_buffer[7] = (checksum >> 8) & 0xFF;
+[e = *U + _tx_buffer * -> -> 7 `i `x -> -> # *U _tx_buffer `i `x -> & >> _checksum -> 8 `i -> -> 255 `i `ui `uc ]
+"87
+[; ;RS485_ModbusRTU_master.c: 87:     RS485sendString((char *)tx_buffer);
+[e ( _RS485sendString (1 -> _tx_buffer `*uc ]
+"90
+[; ;RS485_ModbusRTU_master.c: 90:     master_rcv_buffer_len = 5 + (register_num * 2);
+[e = _master_rcv_buffer_len + -> -> 5 `i `ui * _register_num -> -> 2 `i `ui ]
+"91
+[; ;RS485_ModbusRTU_master.c: 91:     return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 106  ]
+"92
+[; ;RS485_ModbusRTU_master.c: 92: }
+[e :UE 106 ]
+}
+"95
+[; ;RS485_ModbusRTU_master.c: 95: uint8_t modbusWriteCoil(uint8_t *tx_buffer, uint16_t len, uint8_t slave_address, uint16_t coil, uint8_t coil_state)
+[v _modbusWriteCoil `(uc ~T0 @X0 1 ef5`*uc`ui`uc`ui`uc ]
+"96
+[; ;RS485_ModbusRTU_master.c: 96: {
+{
+[e :U _modbusWriteCoil ]
+"95
+[; ;RS485_ModbusRTU_master.c: 95: uint8_t modbusWriteCoil(uint8_t *tx_buffer, uint16_t len, uint8_t slave_address, uint16_t coil, uint8_t coil_state)
+[v _tx_buffer `*uc ~T0 @X0 1 r1 ]
+[v _len `ui ~T0 @X0 1 r2 ]
+[v _slave_address `uc ~T0 @X0 1 r3 ]
+[v _coil `ui ~T0 @X0 1 r4 ]
+[v _coil_state `uc ~T0 @X0 1 r5 ]
+"96
+[; ;RS485_ModbusRTU_master.c: 96: {
+[f ]
+"98
+[; ;RS485_ModbusRTU_master.c: 98:     clearBuffer(tx_buffer, len);
+[e ( _clearBuffer (2 , _tx_buffer _len ]
+"101
+[; ;RS485_ModbusRTU_master.c: 101:     tx_buffer[0] = slave_address;
+[e = *U + _tx_buffer * -> -> 0 `i `x -> -> # *U _tx_buffer `i `x _slave_address ]
+"104
+[; ;RS485_ModbusRTU_master.c: 104:     tx_buffer[1] = 0x05;
+[e = *U + _tx_buffer * -> -> 1 `i `x -> -> # *U _tx_buffer `i `x -> -> 5 `i `uc ]
+"107
+[; ;RS485_ModbusRTU_master.c: 107:     tx_buffer[3] = coil & 0xFF;
+[e = *U + _tx_buffer * -> -> 3 `i `x -> -> # *U _tx_buffer `i `x -> & _coil -> -> 255 `i `ui `uc ]
+"108
+[; ;RS485_ModbusRTU_master.c: 108:     tx_buffer[2] = (coil >> 8) & 0xFF;
+[e = *U + _tx_buffer * -> -> 2 `i `x -> -> # *U _tx_buffer `i `x -> & >> _coil -> 8 `i -> -> 255 `i `ui `uc ]
+"111
+[; ;RS485_ModbusRTU_master.c: 111:     tx_buffer[5] = 0x00;
+[e = *U + _tx_buffer * -> -> 5 `i `x -> -> # *U _tx_buffer `i `x -> -> 0 `i `uc ]
+"112
+[; ;RS485_ModbusRTU_master.c: 112:     if (coil_state == COIL_ON)
+[e $ ! == -> _coil_state `i -> . `E907 0 `i 112  ]
+"113
+[; ;RS485_ModbusRTU_master.c: 113:         tx_buffer[4] = 0xFF;
+[e = *U + _tx_buffer * -> -> 4 `i `x -> -> # *U _tx_buffer `i `x -> -> 255 `i `uc ]
+[e $U 113  ]
+"114
+[; ;RS485_ModbusRTU_master.c: 114:     else if (coil_state == COIL_OFF)
+[e :U 112 ]
+[e $ ! == -> _coil_state `i -> . `E907 1 `i 114  ]
+"115
+[; ;RS485_ModbusRTU_master.c: 115:         tx_buffer[4] = 0x00;
+[e = *U + _tx_buffer * -> -> 4 `i `x -> -> # *U _tx_buffer `i `x -> -> 0 `i `uc ]
+[e $U 115  ]
+"116
+[; ;RS485_ModbusRTU_master.c: 116:     else
+[e :U 114 ]
+"117
+[; ;RS485_ModbusRTU_master.c: 117:         return 0;
+[e ) -> -> 0 `i `uc ]
+[e $UE 111  ]
+[e :U 115 ]
+[e :U 113 ]
+"120
+[; ;RS485_ModbusRTU_master.c: 120:     uint16_t checksum = crc16(tx_buffer, 6);
+[v _checksum `ui ~T0 @X0 1 a ]
+[e = _checksum ( _crc16 (2 , _tx_buffer -> -> 6 `i `ui ]
+"121
+[; ;RS485_ModbusRTU_master.c: 121:     tx_buffer[6] = checksum & 0xFF;
+[e = *U + _tx_buffer * -> -> 6 `i `x -> -> # *U _tx_buffer `i `x -> & _checksum -> -> 255 `i `ui `uc ]
+"122
+[; ;RS485_ModbusRTU_master.c: 122:     tx_buffer[7] = (checksum >> 8) & 0xFF;
+[e = *U + _tx_buffer * -> -> 7 `i `x -> -> # *U _tx_buffer `i `x -> & >> _checksum -> 8 `i -> -> 255 `i `ui `uc ]
+"125
+[; ;RS485_ModbusRTU_master.c: 125:     RS485sendString((char *)tx_buffer);
+[e ( _RS485sendString (1 -> _tx_buffer `*uc ]
+"128
+[; ;RS485_ModbusRTU_master.c: 128:     master_rcv_buffer_len = 8;
+[e = _master_rcv_buffer_len -> -> 8 `i `ui ]
+"129
+[; ;RS485_ModbusRTU_master.c: 129:     return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 111  ]
+"130
+[; ;RS485_ModbusRTU_master.c: 130: }
+[e :UE 111 ]
+}
+"133
+[; ;RS485_ModbusRTU_master.c: 133: uint8_t modbusWriteRegister(uint8_t *tx_buffer, uint16_t len, uint8_t slave_address, uint16_t register_, uint16_t register_value)
+[v _modbusWriteRegister `(uc ~T0 @X0 1 ef5`*uc`ui`uc`ui`ui ]
+"134
+[; ;RS485_ModbusRTU_master.c: 134: {
+{
+[e :U _modbusWriteRegister ]
+"133
+[; ;RS485_ModbusRTU_master.c: 133: uint8_t modbusWriteRegister(uint8_t *tx_buffer, uint16_t len, uint8_t slave_address, uint16_t register_, uint16_t register_value)
+[v _tx_buffer `*uc ~T0 @X0 1 r1 ]
+[v _len `ui ~T0 @X0 1 r2 ]
+[v _slave_address `uc ~T0 @X0 1 r3 ]
+[v _register_ `ui ~T0 @X0 1 r4 ]
+[v _register_value `ui ~T0 @X0 1 r5 ]
+"134
+[; ;RS485_ModbusRTU_master.c: 134: {
+[f ]
+"136
+[; ;RS485_ModbusRTU_master.c: 136:     clearBuffer(tx_buffer, len);
+[e ( _clearBuffer (2 , _tx_buffer _len ]
+"139
+[; ;RS485_ModbusRTU_master.c: 139:     tx_buffer[0] = slave_address;
+[e = *U + _tx_buffer * -> -> 0 `i `x -> -> # *U _tx_buffer `i `x _slave_address ]
+"142
+[; ;RS485_ModbusRTU_master.c: 142:     tx_buffer[1] = 0x06;
+[e = *U + _tx_buffer * -> -> 1 `i `x -> -> # *U _tx_buffer `i `x -> -> 6 `i `uc ]
+"145
+[; ;RS485_ModbusRTU_master.c: 145:     tx_buffer[3] = register_ & 0xFF;
+[e = *U + _tx_buffer * -> -> 3 `i `x -> -> # *U _tx_buffer `i `x -> & _register_ -> -> 255 `i `ui `uc ]
+"146
+[; ;RS485_ModbusRTU_master.c: 146:     tx_buffer[2] = (register_ >> 8) & 0xFF;
+[e = *U + _tx_buffer * -> -> 2 `i `x -> -> # *U _tx_buffer `i `x -> & >> _register_ -> 8 `i -> -> 255 `i `ui `uc ]
+"149
+[; ;RS485_ModbusRTU_master.c: 149:     tx_buffer[5] = register_value & 0xFF;
+[e = *U + _tx_buffer * -> -> 5 `i `x -> -> # *U _tx_buffer `i `x -> & _register_value -> -> 255 `i `ui `uc ]
+"150
+[; ;RS485_ModbusRTU_master.c: 150:     tx_buffer[4] = (register_value >> 8) & 0xFF;
+[e = *U + _tx_buffer * -> -> 4 `i `x -> -> # *U _tx_buffer `i `x -> & >> _register_value -> 8 `i -> -> 255 `i `ui `uc ]
+"153
+[; ;RS485_ModbusRTU_master.c: 153:     uint16_t checksum = crc16(tx_buffer, 6);
+[v _checksum `ui ~T0 @X0 1 a ]
+[e = _checksum ( _crc16 (2 , _tx_buffer -> -> 6 `i `ui ]
+"154
+[; ;RS485_ModbusRTU_master.c: 154:     tx_buffer[6] = checksum & 0xFF;
+[e = *U + _tx_buffer * -> -> 6 `i `x -> -> # *U _tx_buffer `i `x -> & _checksum -> -> 255 `i `ui `uc ]
+"155
+[; ;RS485_ModbusRTU_master.c: 155:     tx_buffer[7] = (checksum >> 8) & 0xFF;
+[e = *U + _tx_buffer * -> -> 7 `i `x -> -> # *U _tx_buffer `i `x -> & >> _checksum -> 8 `i -> -> 255 `i `ui `uc ]
+"158
+[; ;RS485_ModbusRTU_master.c: 158:     RS485sendString((char *)tx_buffer);
+[e ( _RS485sendString (1 -> _tx_buffer `*uc ]
+"161
+[; ;RS485_ModbusRTU_master.c: 161:     master_rcv_buffer_len = 8;
+[e = _master_rcv_buffer_len -> -> 8 `i `ui ]
+"162
+[; ;RS485_ModbusRTU_master.c: 162:     return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 116  ]
+"163
+[; ;RS485_ModbusRTU_master.c: 163: }
+[e :UE 116 ]
+}
+"166
+[; ;RS485_ModbusRTU_master.c: 166: uint8_t modbusWriteCoils(uint8_t *tx_buffer, uint16_t len, uint8_t slave_address, uint16_t start_coil, uint16_t coil_num, uint8_t *coil_state)
+[v _modbusWriteCoils `(uc ~T0 @X0 1 ef6`*uc`ui`uc`ui`ui`*uc ]
+"167
+[; ;RS485_ModbusRTU_master.c: 167: {
+{
+[e :U _modbusWriteCoils ]
+"166
+[; ;RS485_ModbusRTU_master.c: 166: uint8_t modbusWriteCoils(uint8_t *tx_buffer, uint16_t len, uint8_t slave_address, uint16_t start_coil, uint16_t coil_num, uint8_t *coil_state)
+[v _tx_buffer `*uc ~T0 @X0 1 r1 ]
+[v _len `ui ~T0 @X0 1 r2 ]
+[v _slave_address `uc ~T0 @X0 1 r3 ]
+[v _start_coil `ui ~T0 @X0 1 r4 ]
+[v _coil_num `ui ~T0 @X0 1 r5 ]
+[v _coil_state `*uc ~T0 @X0 1 r6 ]
+"167
+[; ;RS485_ModbusRTU_master.c: 167: {
+[f ]
+"169
+[; ;RS485_ModbusRTU_master.c: 169:     clearBuffer(tx_buffer, len);
+[e ( _clearBuffer (2 , _tx_buffer _len ]
+"172
+[; ;RS485_ModbusRTU_master.c: 172:     tx_buffer[0] = slave_address;
+[e = *U + _tx_buffer * -> -> 0 `i `x -> -> # *U _tx_buffer `i `x _slave_address ]
+"175
+[; ;RS485_ModbusRTU_master.c: 175:     tx_buffer[1] = 0x0F;
+[e = *U + _tx_buffer * -> -> 1 `i `x -> -> # *U _tx_buffer `i `x -> -> 15 `i `uc ]
+"178
+[; ;RS485_ModbusRTU_master.c: 178:     tx_buffer[3] = start_coil & 0xFF;
+[e = *U + _tx_buffer * -> -> 3 `i `x -> -> # *U _tx_buffer `i `x -> & _start_coil -> -> 255 `i `ui `uc ]
+"179
+[; ;RS485_ModbusRTU_master.c: 179:     tx_buffer[2] = (start_coil >> 8) & 0xFF;
+[e = *U + _tx_buffer * -> -> 2 `i `x -> -> # *U _tx_buffer `i `x -> & >> _start_coil -> 8 `i -> -> 255 `i `ui `uc ]
+"182
+[; ;RS485_ModbusRTU_master.c: 182:     tx_buffer[5] = coil_num & 0xFF;
+[e = *U + _tx_buffer * -> -> 5 `i `x -> -> # *U _tx_buffer `i `x -> & _coil_num -> -> 255 `i `ui `uc ]
+"183
+[; ;RS485_ModbusRTU_master.c: 183:     tx_buffer[4] = (coil_num >> 8) & 0xFF;
+[e = *U + _tx_buffer * -> -> 4 `i `x -> -> # *U _tx_buffer `i `x -> & >> _coil_num -> 8 `i -> -> 255 `i `ui `uc ]
+"185
+[; ;RS485_ModbusRTU_master.c: 185:     uint8_t i;
+[v _i `uc ~T0 @X0 1 a ]
+"186
+[; ;RS485_ModbusRTU_master.c: 186:     for (i = 0; i < (coil_num / 8) + 1; ++i)
+{
+[e = _i -> -> 0 `i `uc ]
+[e $U 121  ]
+[e :U 118 ]
+"187
+[; ;RS485_ModbusRTU_master.c: 187:         tx_buffer[i + 6] = coil_state[i];
+[e = *U + _tx_buffer * -> + -> _i `i -> 6 `i `x -> -> # *U _tx_buffer `i `x *U + _coil_state * -> _i `ux -> -> # *U _coil_state `ui `ux ]
+[e =+ _i -> -> 1 `i `uc ]
+[e :U 121 ]
+[e $ < -> _i `ui + / _coil_num -> -> 8 `i `ui -> -> 1 `i `ui 118  ]
+[e :U 119 ]
+}
+"190
+[; ;RS485_ModbusRTU_master.c: 190:     uint16_t checksum = crc16(tx_buffer, i);
+[v _checksum `ui ~T0 @X0 1 a ]
+[e = _checksum ( _crc16 (2 , _tx_buffer -> _i `ui ]
+"191
+[; ;RS485_ModbusRTU_master.c: 191:     tx_buffer[i++] = checksum & 0xFF;
+[e = *U + _tx_buffer * -> ++ _i -> -> 1 `i `uc `ux -> -> # *U _tx_buffer `ui `ux -> & _checksum -> -> 255 `i `ui `uc ]
+"192
+[; ;RS485_ModbusRTU_master.c: 192:     tx_buffer[i] = (checksum >> 8) & 0xFF;
+[e = *U + _tx_buffer * -> _i `ux -> -> # *U _tx_buffer `ui `ux -> & >> _checksum -> 8 `i -> -> 255 `i `ui `uc ]
+"195
+[; ;RS485_ModbusRTU_master.c: 195:     RS485sendString((char *)tx_buffer);
+[e ( _RS485sendString (1 -> _tx_buffer `*uc ]
+"198
+[; ;RS485_ModbusRTU_master.c: 198:     master_rcv_buffer_len = 8;
+[e = _master_rcv_buffer_len -> -> 8 `i `ui ]
+"199
+[; ;RS485_ModbusRTU_master.c: 199:     return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 117  ]
+"200
+[; ;RS485_ModbusRTU_master.c: 200: }
+[e :UE 117 ]
+}
+"203
+[; ;RS485_ModbusRTU_master.c: 203: uint8_t modbusWriteRegisters(uint8_t *tx_buffer, uint16_t len, uint8_t slave_address, uint16_t start_register, uint16_t register_num, uint16_t *register_value)
+[v _modbusWriteRegisters `(uc ~T0 @X0 1 ef6`*uc`ui`uc`ui`ui`*ui ]
+"204
+[; ;RS485_ModbusRTU_master.c: 204: {
+{
+[e :U _modbusWriteRegisters ]
+"203
+[; ;RS485_ModbusRTU_master.c: 203: uint8_t modbusWriteRegisters(uint8_t *tx_buffer, uint16_t len, uint8_t slave_address, uint16_t start_register, uint16_t register_num, uint16_t *register_value)
+[v _tx_buffer `*uc ~T0 @X0 1 r1 ]
+[v _len `ui ~T0 @X0 1 r2 ]
+[v _slave_address `uc ~T0 @X0 1 r3 ]
+[v _start_register `ui ~T0 @X0 1 r4 ]
+[v _register_num `ui ~T0 @X0 1 r5 ]
+[v _register_value `*ui ~T0 @X0 1 r6 ]
+"204
+[; ;RS485_ModbusRTU_master.c: 204: {
+[f ]
+"206
+[; ;RS485_ModbusRTU_master.c: 206:     clearBuffer(tx_buffer, len);
+[e ( _clearBuffer (2 , _tx_buffer _len ]
+"209
+[; ;RS485_ModbusRTU_master.c: 209:     tx_buffer[0] = slave_address;
+[e = *U + _tx_buffer * -> -> 0 `i `x -> -> # *U _tx_buffer `i `x _slave_address ]
+"212
+[; ;RS485_ModbusRTU_master.c: 212:     tx_buffer[1] = 0x10;
+[e = *U + _tx_buffer * -> -> 1 `i `x -> -> # *U _tx_buffer `i `x -> -> 16 `i `uc ]
+"215
+[; ;RS485_ModbusRTU_master.c: 215:     tx_buffer[3] = start_register & 0xFF;
+[e = *U + _tx_buffer * -> -> 3 `i `x -> -> # *U _tx_buffer `i `x -> & _start_register -> -> 255 `i `ui `uc ]
+"216
+[; ;RS485_ModbusRTU_master.c: 216:     tx_buffer[2] = (start_register >> 8) & 0xFF;
+[e = *U + _tx_buffer * -> -> 2 `i `x -> -> # *U _tx_buffer `i `x -> & >> _start_register -> 8 `i -> -> 255 `i `ui `uc ]
+"219
+[; ;RS485_ModbusRTU_master.c: 219:     tx_buffer[5] = register_num & 0xFF;
+[e = *U + _tx_buffer * -> -> 5 `i `x -> -> # *U _tx_buffer `i `x -> & _register_num -> -> 255 `i `ui `uc ]
+"220
+[; ;RS485_ModbusRTU_master.c: 220:     tx_buffer[4] = (register_num >> 8) & 0xFF;
+[e = *U + _tx_buffer * -> -> 4 `i `x -> -> # *U _tx_buffer `i `x -> & >> _register_num -> 8 `i -> -> 255 `i `ui `uc ]
+"223
+[; ;RS485_ModbusRTU_master.c: 223:     tx_buffer[6] = register_num * 2;
+[e = *U + _tx_buffer * -> -> 6 `i `x -> -> # *U _tx_buffer `i `x -> * _register_num -> -> 2 `i `ui `uc ]
+"225
+[; ;RS485_ModbusRTU_master.c: 225:     uint8_t i;
+[v _i `uc ~T0 @X0 1 a ]
+"226
+[; ;RS485_ModbusRTU_master.c: 226:     for (i = 0; i < register_num * 2; ++i)
+{
+[e = _i -> -> 0 `i `uc ]
+[e $U 126  ]
+[e :U 123 ]
+"227
+[; ;RS485_ModbusRTU_master.c: 227:     {
+{
+"228
+[; ;RS485_ModbusRTU_master.c: 228:         if (i % 2 == 0)
+[e $ ! == % -> _i `i -> 2 `i -> 0 `i 127  ]
+"229
+[; ;RS485_ModbusRTU_master.c: 229:             tx_buffer[3 + i] = (register_value[i / 2] >> 8) & 0xFF;
+[e = *U + _tx_buffer * -> + -> 3 `i -> _i `i `x -> -> # *U _tx_buffer `i `x -> & >> *U + _register_value * -> / -> _i `i -> 2 `i `x -> -> # *U _register_value `i `x -> 8 `i -> -> 255 `i `ui `uc ]
+[e $U 128  ]
+"230
+[; ;RS485_ModbusRTU_master.c: 230:         else
+[e :U 127 ]
+"231
+[; ;RS485_ModbusRTU_master.c: 231:             tx_buffer[3 + i] = register_value[i / 2] & 0xFF;
+[e = *U + _tx_buffer * -> + -> 3 `i -> _i `i `x -> -> # *U _tx_buffer `i `x -> & *U + _register_value * -> / -> _i `i -> 2 `i `x -> -> # *U _register_value `i `x -> -> 255 `i `ui `uc ]
+[e :U 128 ]
+"232
+[; ;RS485_ModbusRTU_master.c: 232:     }
+}
+[e =+ _i -> -> 1 `i `uc ]
+[e :U 126 ]
+[e $ < -> _i `ui * _register_num -> -> 2 `i `ui 123  ]
+[e :U 124 ]
+}
+"235
+[; ;RS485_ModbusRTU_master.c: 235:     uint16_t checksum = crc16(tx_buffer, i);
+[v _checksum `ui ~T0 @X0 1 a ]
+[e = _checksum ( _crc16 (2 , _tx_buffer -> _i `ui ]
+"236
+[; ;RS485_ModbusRTU_master.c: 236:     tx_buffer[i++] = checksum & 0xFF;
+[e = *U + _tx_buffer * -> ++ _i -> -> 1 `i `uc `ux -> -> # *U _tx_buffer `ui `ux -> & _checksum -> -> 255 `i `ui `uc ]
+"237
+[; ;RS485_ModbusRTU_master.c: 237:     tx_buffer[i] = (checksum >> 8) & 0xFF;
+[e = *U + _tx_buffer * -> _i `ux -> -> # *U _tx_buffer `ui `ux -> & >> _checksum -> 8 `i -> -> 255 `i `ui `uc ]
+"240
+[; ;RS485_ModbusRTU_master.c: 240:     RS485sendString((char *)tx_buffer);
+[e ( _RS485sendString (1 -> _tx_buffer `*uc ]
+"243
+[; ;RS485_ModbusRTU_master.c: 243:     master_rcv_buffer_len = 8;
+[e = _master_rcv_buffer_len -> -> 8 `i `ui ]
+"244
+[; ;RS485_ModbusRTU_master.c: 244:     return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 122  ]
+"245
+[; ;RS485_ModbusRTU_master.c: 245: }
+[e :UE 122 ]
+}
+"248
+[; ;RS485_ModbusRTU_master.c: 248: int modbusRcvResponse(uint8_t *rcv_buffer)
+[v _modbusRcvResponse `(i ~T0 @X0 1 ef1`*uc ]
+"249
+[; ;RS485_ModbusRTU_master.c: 249: {
+{
+[e :U _modbusRcvResponse ]
+"248
+[; ;RS485_ModbusRTU_master.c: 248: int modbusRcvResponse(uint8_t *rcv_buffer)
+[v _rcv_buffer `*uc ~T0 @X0 1 r1 ]
+"249
+[; ;RS485_ModbusRTU_master.c: 249: {
+[f ]
+"250
+[; ;RS485_ModbusRTU_master.c: 250:     return RS485rcvString((char *)rcv_buffer, master_rcv_buffer_len);
+[e ) ( _RS485rcvString (2 , -> _rcv_buffer `*uc _master_rcv_buffer_len ]
+[e $UE 129  ]
+"251
+[; ;RS485_ModbusRTU_master.c: 251: }
+[e :UE 129 ]
+}
+"253
+[; ;RS485_ModbusRTU_master.c: 253: uint8_t modbusTest(uint8_t *tx_buffer, uint16_t len, uint8_t mode, uint8_t slave_address, uint16_t start_coil, uint16_t coil_num)
+[v _modbusTest `(uc ~T0 @X0 1 ef6`*uc`ui`uc`uc`ui`ui ]
+"254
+[; ;RS485_ModbusRTU_master.c: 254: {
+{
+[e :U _modbusTest ]
+"253
+[; ;RS485_ModbusRTU_master.c: 253: uint8_t modbusTest(uint8_t *tx_buffer, uint16_t len, uint8_t mode, uint8_t slave_address, uint16_t start_coil, uint16_t coil_num)
+[v _tx_buffer `*uc ~T0 @X0 1 r1 ]
+[v _len `ui ~T0 @X0 1 r2 ]
+[v _mode `uc ~T0 @X0 1 r3 ]
+[v _slave_address `uc ~T0 @X0 1 r4 ]
+[v _start_coil `ui ~T0 @X0 1 r5 ]
+[v _coil_num `ui ~T0 @X0 1 r6 ]
+"254
+[; ;RS485_ModbusRTU_master.c: 254: {
+[f ]
+"256
+[; ;RS485_ModbusRTU_master.c: 256:     clearBuffer(tx_buffer, len);
+[e ( _clearBuffer (2 , _tx_buffer _len ]
+"258
+[; ;RS485_ModbusRTU_master.c: 258:     tx_buffer[0] = 0x31;
+[e = *U + _tx_buffer * -> -> 0 `i `x -> -> # *U _tx_buffer `i `x -> -> 49 `i `uc ]
+"259
+[; ;RS485_ModbusRTU_master.c: 259:     tx_buffer[1] = 0x32;
+[e = *U + _tx_buffer * -> -> 1 `i `x -> -> # *U _tx_buffer `i `x -> -> 50 `i `uc ]
+"260
+[; ;RS485_ModbusRTU_master.c: 260:     tx_buffer[2] = 0x33;
+[e = *U + _tx_buffer * -> -> 2 `i `x -> -> # *U _tx_buffer `i `x -> -> 51 `i `uc ]
+"261
+[; ;RS485_ModbusRTU_master.c: 261:     tx_buffer[3] = 0x34;
+[e = *U + _tx_buffer * -> -> 3 `i `x -> -> # *U _tx_buffer `i `x -> -> 52 `i `uc ]
+"262
+[; ;RS485_ModbusRTU_master.c: 262:     tx_buffer[4] = 0x35;
+[e = *U + _tx_buffer * -> -> 4 `i `x -> -> # *U _tx_buffer `i `x -> -> 53 `i `uc ]
+"263
+[; ;RS485_ModbusRTU_master.c: 263:     tx_buffer[5] = 0x36;
+[e = *U + _tx_buffer * -> -> 5 `i `x -> -> # *U _tx_buffer `i `x -> -> 54 `i `uc ]
+"265
+[; ;RS485_ModbusRTU_master.c: 265:     tx_buffer[6] = 0x37;
+[e = *U + _tx_buffer * -> -> 6 `i `x -> -> # *U _tx_buffer `i `x -> -> 55 `i `uc ]
+"266
+[; ;RS485_ModbusRTU_master.c: 266:     tx_buffer[7] = 0x38;
+[e = *U + _tx_buffer * -> -> 7 `i `x -> -> # *U _tx_buffer `i `x -> -> 56 `i `uc ]
+"269
+[; ;RS485_ModbusRTU_master.c: 269:     RS485sendString((char*)tx_buffer);
+[e ( _RS485sendString (1 -> _tx_buffer `*uc ]
+"270
+[; ;RS485_ModbusRTU_master.c: 270:     return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 130  ]
+"271
+[; ;RS485_ModbusRTU_master.c: 271: }
+[e :UE 130 ]
+}

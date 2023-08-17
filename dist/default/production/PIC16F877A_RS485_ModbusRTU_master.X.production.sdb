@@ -1,0 +1,380 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 0 ]
+"41 C:\Users\84935\MPLABXProjects\PIC16F877A_RS485_ModbusRTU_master.X\PIC16F877A_RS485_ModbusRTU_master.c
+[e E902 modbusRTU_mode `uc
+READ_COILS 1
+READ_DISCRETE_INPUTS 2
+READ_HOLDING_REGISTERS 3
+READ_INPUT_REGISTERS 4
+]
+"57
+[e E907 coil_status `uc
+COIL_ON 0
+COIL_OFF 1
+]
+"28 C:\Users\84935\MPLABXProjects\PIC16F877A_RS485_ModbusRTU_master.X\RS485_ModbusRTU_master.c
+[e E902 modbusRTU_mode `uc
+READ_COILS 1
+READ_DISCRETE_INPUTS 2
+READ_HOLDING_REGISTERS 3
+READ_INPUT_REGISTERS 4
+]
+"112
+[e E907 coil_status `uc
+COIL_ON 0
+COIL_OFF 1
+]
+"5 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"40 C:\Users\84935\MPLABXProjects\PIC16F877A_RS485_ModbusRTU_master.X\CRC.c
+[v _crc16 crc16 `(ui  1 e 2 0 ]
+"8 C:\Users\84935\MPLABXProjects\PIC16F877A_RS485_ModbusRTU_master.X\PIC16F877A_RS485.c
+[v _RS485TxConfig RS485TxConfig `(v  1 s 1 RS485TxConfig ]
+"19
+[v _RS485Init RS485Init `(v  1 e 1 0 ]
+"41
+[v _RS485sendString RS485sendString `(v  1 e 1 0 ]
+"63
+[v _RS485rcvString RS485rcvString `(i  1 e 2 0 ]
+"19 C:\Users\84935\MPLABXProjects\PIC16F877A_RS485_ModbusRTU_master.X\PIC16F877A_RS485_ModbusRTU_master.c
+[v _ISR ISR `II(v  1 e 1 0 ]
+"31
+[v _main main `(v  1 e 1 0 ]
+"48 C:\Users\84935\MPLABXProjects\PIC16F877A_RS485_ModbusRTU_master.X\PIC16F877A_UART.c
+[v _UARTTransRcvInit UARTTransRcvInit `(v  1 e 1 0 ]
+"73
+[v _UARTsendChar UARTsendChar `(v  1 e 1 0 ]
+"82
+[v _UARTsendString UARTsendString `(v  1 e 1 0 ]
+"89
+[v _UARTrcvChar UARTrcvChar `(uc  1 e 1 0 ]
+"97
+[v _UARTrcvString UARTrcvString `(i  1 e 2 0 ]
+"4 C:\Users\84935\MPLABXProjects\PIC16F877A_RS485_ModbusRTU_master.X\RS485_ModbusRTU_master.c
+[v _clearBuffer clearBuffer `(v  1 s 1 clearBuffer ]
+"13
+[v _modbusRTUInit modbusRTUInit `(v  1 e 1 0 ]
+"19
+[v _modbusReadCoils modbusReadCoils `(uc  1 e 1 0 ]
+"57
+[v _modbusReadRegisters modbusReadRegisters `(uc  1 e 1 0 ]
+"95
+[v _modbusWriteCoil modbusWriteCoil `(uc  1 e 1 0 ]
+"133
+[v _modbusWriteRegister modbusWriteRegister `(uc  1 e 1 0 ]
+"166
+[v _modbusWriteCoils modbusWriteCoils `(uc  1 e 1 0 ]
+"203
+[v _modbusWriteRegisters modbusWriteRegisters `(uc  1 e 1 0 ]
+"248
+[v _modbusRcvResponse modbusRcvResponse `(i  1 e 2 0 ]
+"10 C:\Users\84935\MPLABXProjects\PIC16F877A_RS485_ModbusRTU_master.X/PIC16F877A_UART.h
+[v _uart_str_idx uart_str_idx `ui  1 s 2 uart_str_idx ]
+"23 C:\Users\84935\MPLABXProjects\PIC16F877A_RS485_ModbusRTU_master.X/RS485_ModbusRTU_master.h
+[v _master_rcv_buffer_len master_rcv_buffer_len `ui  1 e 2 0 ]
+"1060 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h
+[v _TXREG TXREG `VEuc  1 e 1 @25 ]
+"1067
+[v _RCREG RCREG `VEuc  1 e 1 @26 ]
+"2081
+[v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
+"2421
+[v _BRGH BRGH `VEb  1 e 0 @1218 ]
+"2520
+[v _CREN CREN `VEb  1 e 0 @196 ]
+"2574
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"2634
+[v _PEIE PEIE `VEb  1 e 0 @94 ]
+"2745
+[v _RCIE RCIE `VEb  1 e 0 @1125 ]
+"2748
+[v _RCIF RCIF `VEb  1 e 0 @101 ]
+"2754
+[v _RD0 RD0 `VEb  1 e 0 @64 ]
+"2799
+[v _RX9 RX9 `VEb  1 e 0 @198 ]
+"2817
+[v _SPEN SPEN `VEb  1 e 0 @199 ]
+"2847
+[v _SYNC SYNC `VEb  1 e 0 @1220 ]
+"2982
+[v _TRISC6 TRISC6 `VEb  1 e 0 @1086 ]
+"2985
+[v _TRISC7 TRISC7 `VEb  1 e 0 @1087 ]
+"2988
+[v _TRISD0 TRISD0 `VEb  1 e 0 @1088 ]
+"3021
+[v _TRMT TRMT `VEb  1 e 0 @1217 ]
+"3027
+[v _TX9 TX9 `VEb  1 e 0 @1222 ]
+"3036
+[v _TXEN TXEN `VEb  1 e 0 @1221 ]
+"4 C:\Users\84935\MPLABXProjects\PIC16F877A_RS485_ModbusRTU_master.X\CRC.c
+[v _wCRCTable wCRCTable `DC[256]ui  1 s 512 wCRCTable ]
+"9 C:\Users\84935\MPLABXProjects\PIC16F877A_RS485_ModbusRTU_master.X\PIC16F877A_RS485_ModbusRTU_master.c
+[v _tx_buffer tx_buffer `[25]uc  1 e 25 0 ]
+"10
+[v _rcv_buffer rcv_buffer `[25]uc  1 e 25 0 ]
+"11
+[v _error_msg error_msg `[19]uc  1 e 19 0 ]
+"14
+[v _coil_write_state coil_write_state `[2]uc  1 e 2 0 ]
+"15
+[v _register_write_buffer register_write_buffer `[2]ui  1 e 4 0 ]
+"16
+[v _state state `uc  1 e 1 0 ]
+"31
+[v _main main `(v  1 e 1 0 ]
+{
+"78
+} 0
+"203 C:\Users\84935\MPLABXProjects\PIC16F877A_RS485_ModbusRTU_master.X\RS485_ModbusRTU_master.c
+[v _modbusWriteRegisters modbusWriteRegisters `(uc  1 e 1 0 ]
+{
+[v modbusWriteRegisters@tx_buffer tx_buffer `*.4uc  1 a 1 wreg ]
+"235
+[v modbusWriteRegisters@checksum checksum `ui  1 a 2 28 ]
+"225
+[v modbusWriteRegisters@i i `uc  1 a 1 30 ]
+"203
+[v modbusWriteRegisters@tx_buffer tx_buffer `*.4uc  1 a 1 wreg ]
+[v modbusWriteRegisters@len len `ui  1 p 2 13 ]
+[v modbusWriteRegisters@slave_address slave_address `uc  1 p 1 15 ]
+[v modbusWriteRegisters@start_register start_register `ui  1 p 2 16 ]
+[v modbusWriteRegisters@register_num register_num `ui  1 p 2 18 ]
+[v modbusWriteRegisters@register_value register_value `*.4ui  1 p 1 20 ]
+"206
+[v modbusWriteRegisters@tx_buffer tx_buffer `*.4uc  1 a 1 31 ]
+"245
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 9 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 8 ]
+[v ___awdiv@counter counter `uc  1 a 1 7 ]
+"5
+[v ___awdiv@divisor divisor `i  1 p 2 3 ]
+[v ___awdiv@dividend dividend `i  1 p 2 5 ]
+"41
+} 0
+"133 C:\Users\84935\MPLABXProjects\PIC16F877A_RS485_ModbusRTU_master.X\RS485_ModbusRTU_master.c
+[v _modbusWriteRegister modbusWriteRegister `(uc  1 e 1 0 ]
+{
+[v modbusWriteRegister@tx_buffer tx_buffer `*.4uc  1 a 1 wreg ]
+"153
+[v modbusWriteRegister@checksum checksum `ui  1 a 2 20 ]
+"133
+[v modbusWriteRegister@tx_buffer tx_buffer `*.4uc  1 a 1 wreg ]
+[v modbusWriteRegister@len len `ui  1 p 2 13 ]
+[v modbusWriteRegister@slave_address slave_address `uc  1 p 1 15 ]
+[v modbusWriteRegister@register_ register_ `ui  1 p 2 16 ]
+[v modbusWriteRegister@register_value register_value `ui  1 p 2 18 ]
+"136
+[v modbusWriteRegister@tx_buffer tx_buffer `*.4uc  1 a 1 22 ]
+"163
+} 0
+"166
+[v _modbusWriteCoils modbusWriteCoils `(uc  1 e 1 0 ]
+{
+[v modbusWriteCoils@tx_buffer tx_buffer `*.4uc  1 a 1 wreg ]
+"190
+[v modbusWriteCoils@checksum checksum `ui  1 a 2 27 ]
+"185
+[v modbusWriteCoils@i i `uc  1 a 1 29 ]
+"166
+[v modbusWriteCoils@tx_buffer tx_buffer `*.4uc  1 a 1 wreg ]
+[v modbusWriteCoils@len len `ui  1 p 2 13 ]
+[v modbusWriteCoils@slave_address slave_address `uc  1 p 1 15 ]
+[v modbusWriteCoils@start_coil start_coil `ui  1 p 2 16 ]
+[v modbusWriteCoils@coil_num coil_num `ui  1 p 2 18 ]
+[v modbusWriteCoils@coil_state coil_state `*.4uc  1 p 1 20 ]
+"169
+[v modbusWriteCoils@tx_buffer tx_buffer `*.4uc  1 a 1 30 ]
+"200
+} 0
+"95
+[v _modbusWriteCoil modbusWriteCoil `(uc  1 e 1 0 ]
+{
+[v modbusWriteCoil@tx_buffer tx_buffer `*.4uc  1 a 1 wreg ]
+"120
+[v modbusWriteCoil@checksum checksum `ui  1 a 2 19 ]
+"95
+[v modbusWriteCoil@tx_buffer tx_buffer `*.4uc  1 a 1 wreg ]
+[v modbusWriteCoil@len len `ui  1 p 2 13 ]
+[v modbusWriteCoil@slave_address slave_address `uc  1 p 1 15 ]
+[v modbusWriteCoil@coil coil `ui  1 p 2 16 ]
+[v modbusWriteCoil@coil_state coil_state `uc  1 p 1 18 ]
+"98
+[v modbusWriteCoil@tx_buffer tx_buffer `*.4uc  1 a 1 21 ]
+"130
+} 0
+"57
+[v _modbusReadRegisters modbusReadRegisters `(uc  1 e 1 0 ]
+{
+[v modbusReadRegisters@tx_buffer tx_buffer `*.4uc  1 a 1 wreg ]
+"82
+[v modbusReadRegisters@checksum checksum `ui  1 a 2 23 ]
+"57
+[v modbusReadRegisters@tx_buffer tx_buffer `*.4uc  1 a 1 wreg ]
+[v modbusReadRegisters@len len `ui  1 p 2 13 ]
+[v modbusReadRegisters@mode mode `uc  1 p 1 15 ]
+[v modbusReadRegisters@slave_address slave_address `uc  1 p 1 16 ]
+[v modbusReadRegisters@start_register start_register `ui  1 p 2 17 ]
+[v modbusReadRegisters@register_num register_num `ui  1 p 2 19 ]
+"60
+[v modbusReadRegisters@tx_buffer tx_buffer `*.4uc  1 a 1 25 ]
+"92
+} 0
+"19
+[v _modbusReadCoils modbusReadCoils `(uc  1 e 1 0 ]
+{
+[v modbusReadCoils@tx_buffer tx_buffer `*.4uc  1 a 1 wreg ]
+"44
+[v modbusReadCoils@checksum checksum `ui  1 a 2 23 ]
+"19
+[v modbusReadCoils@tx_buffer tx_buffer `*.4uc  1 a 1 wreg ]
+[v modbusReadCoils@len len `ui  1 p 2 13 ]
+[v modbusReadCoils@mode mode `uc  1 p 1 15 ]
+[v modbusReadCoils@slave_address slave_address `uc  1 p 1 16 ]
+[v modbusReadCoils@start_coil start_coil `ui  1 p 2 17 ]
+[v modbusReadCoils@coil_num coil_num `ui  1 p 2 19 ]
+"22
+[v modbusReadCoils@tx_buffer tx_buffer `*.4uc  1 a 1 25 ]
+"54
+} 0
+"40 C:\Users\84935\MPLABXProjects\PIC16F877A_RS485_ModbusRTU_master.X\CRC.c
+[v _crc16 crc16 `(ui  1 e 2 0 ]
+{
+[v crc16@buffer buffer `*.4uc  1 a 1 wreg ]
+"43
+[v crc16@crcWord crcWord `ui  1 a 2 10 ]
+"42
+[v crc16@temp temp `uc  1 a 1 9 ]
+"40
+[v crc16@buffer buffer `*.4uc  1 a 1 wreg ]
+[v crc16@length length `ui  1 p 2 3 ]
+"43
+[v crc16@buffer buffer `*.4uc  1 a 1 12 ]
+"52
+} 0
+"4 C:\Users\84935\MPLABXProjects\PIC16F877A_RS485_ModbusRTU_master.X\RS485_ModbusRTU_master.c
+[v _clearBuffer clearBuffer `(v  1 s 1 clearBuffer ]
+{
+[v clearBuffer@buffer buffer `*.4uc  1 a 1 wreg ]
+"6
+[v clearBuffer@i i `uc  1 a 1 7 ]
+"4
+[v clearBuffer@buffer buffer `*.4uc  1 a 1 wreg ]
+[v clearBuffer@len len `ui  1 p 2 3 ]
+"6
+[v clearBuffer@buffer buffer `*.4uc  1 a 1 8 ]
+"8
+} 0
+"41 C:\Users\84935\MPLABXProjects\PIC16F877A_RS485_ModbusRTU_master.X\PIC16F877A_RS485.c
+[v _RS485sendString RS485sendString `(v  1 e 1 0 ]
+{
+[v RS485sendString@str str `*.4uc  1 a 1 wreg ]
+[v RS485sendString@str str `*.4uc  1 a 1 wreg ]
+"44
+[v RS485sendString@str str `*.4uc  1 a 1 10 ]
+"51
+} 0
+"82 C:\Users\84935\MPLABXProjects\PIC16F877A_RS485_ModbusRTU_master.X\PIC16F877A_UART.c
+[v _UARTsendString UARTsendString `(v  1 e 1 0 ]
+{
+[v UARTsendString@str str `*.4uc  1 a 1 wreg ]
+"84
+[v UARTsendString@i i `i  1 a 2 5 ]
+"82
+[v UARTsendString@str str `*.4uc  1 a 1 wreg ]
+"84
+[v UARTsendString@str str `*.4uc  1 a 1 7 ]
+"86
+} 0
+"73
+[v _UARTsendChar UARTsendChar `(v  1 e 1 0 ]
+{
+[v UARTsendChar@c c `uc  1 a 1 wreg ]
+[v UARTsendChar@c c `uc  1 a 1 wreg ]
+[v UARTsendChar@c c `uc  1 a 1 3 ]
+"79
+} 0
+"13 C:\Users\84935\MPLABXProjects\PIC16F877A_RS485_ModbusRTU_master.X\RS485_ModbusRTU_master.c
+[v _modbusRTUInit modbusRTUInit `(v  1 e 1 0 ]
+{
+"16
+} 0
+"19 C:\Users\84935\MPLABXProjects\PIC16F877A_RS485_ModbusRTU_master.X\PIC16F877A_RS485.c
+[v _RS485Init RS485Init `(v  1 e 1 0 ]
+{
+"25
+} 0
+"48 C:\Users\84935\MPLABXProjects\PIC16F877A_RS485_ModbusRTU_master.X\PIC16F877A_UART.c
+[v _UARTTransRcvInit UARTTransRcvInit `(v  1 e 1 0 ]
+{
+"70
+} 0
+"8 C:\Users\84935\MPLABXProjects\PIC16F877A_RS485_ModbusRTU_master.X\PIC16F877A_RS485.c
+[v _RS485TxConfig RS485TxConfig `(v  1 s 1 RS485TxConfig ]
+{
+"14
+} 0
+"19 C:\Users\84935\MPLABXProjects\PIC16F877A_RS485_ModbusRTU_master.X\PIC16F877A_RS485_ModbusRTU_master.c
+[v _ISR ISR `II(v  1 e 1 0 ]
+{
+"29
+} 0
+"248 C:\Users\84935\MPLABXProjects\PIC16F877A_RS485_ModbusRTU_master.X\RS485_ModbusRTU_master.c
+[v _modbusRcvResponse modbusRcvResponse `(i  1 e 2 0 ]
+{
+[v modbusRcvResponse@rcv_buffer rcv_buffer `*.4uc  1 a 1 wreg ]
+[v modbusRcvResponse@rcv_buffer rcv_buffer `*.4uc  1 a 1 wreg ]
+"250
+[v modbusRcvResponse@rcv_buffer rcv_buffer `*.4uc  1 a 1 13 ]
+"251
+} 0
+"63 C:\Users\84935\MPLABXProjects\PIC16F877A_RS485_ModbusRTU_master.X\PIC16F877A_RS485.c
+[v _RS485rcvString RS485rcvString `(i  1 e 2 0 ]
+{
+[v RS485rcvString@rcv_buffer rcv_buffer `*.4uc  1 a 1 wreg ]
+"68
+[v RS485rcvString@done done `i  1 a 2 8 ]
+"63
+[v RS485rcvString@rcv_buffer rcv_buffer `*.4uc  1 a 1 wreg ]
+[v RS485rcvString@length length `ui  1 p 2 6 ]
+"66
+[v RS485rcvString@rcv_buffer rcv_buffer `*.4uc  1 a 1 10 ]
+"70
+} 0
+"97 C:\Users\84935\MPLABXProjects\PIC16F877A_RS485_ModbusRTU_master.X\PIC16F877A_UART.c
+[v _UARTrcvString UARTrcvString `(i  1 e 2 0 ]
+{
+[v UARTrcvString@rcv_buffer rcv_buffer `*.4uc  1 a 1 wreg ]
+[v UARTrcvString@rcv_buffer rcv_buffer `*.4uc  1 a 1 wreg ]
+[v UARTrcvString@length length `ui  1 p 2 1 ]
+"99
+[v UARTrcvString@rcv_buffer rcv_buffer `*.4uc  1 a 1 5 ]
+"113
+} 0
+"89
+[v _UARTrcvChar UARTrcvChar `(uc  1 e 1 0 ]
+{
+"91
+[v UARTrcvChar@c c `uc  1 a 1 0 ]
+"94
+} 0

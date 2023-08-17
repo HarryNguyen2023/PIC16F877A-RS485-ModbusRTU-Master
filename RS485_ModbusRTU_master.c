@@ -1,4 +1,4 @@
-#include "RS485_ModbusRTU.h"
+#include "RS485_ModbusRTU_master.h"
 
 // --------------------------------Static private functions hidden from user------------------------------------------------
 static void clearBuffer(uint8_t *buffer, uint16_t len)
@@ -8,6 +8,12 @@ static void clearBuffer(uint8_t *buffer, uint16_t len)
 }
 
 // ---------------------------------Public function to interface with user---------------------------------------------------
+
+// Function to initiate the ModbusRTU communication
+void modbusRTUInit()
+{
+    RS485Init();
+}
 
 // Function to read the state of coils via ModbusRTU
 uint8_t modbusReadCoils(uint8_t *tx_buffer, uint16_t len, uint8_t mode, uint8_t slave_address, uint16_t start_coil, uint16_t coil_num)
@@ -42,7 +48,7 @@ uint8_t modbusReadCoils(uint8_t *tx_buffer, uint16_t len, uint8_t mode, uint8_t 
     // Transmit the request message over RS485
     RS485sendString((char *)tx_buffer);
 
-    // Set the length for the response message inteded to be received
+    // Set the length for the response message intended to be received
     master_rcv_buffer_len = 6 + (coil_num / 8);
     return 1;
 }
@@ -80,7 +86,7 @@ uint8_t modbusReadRegisters(uint8_t *tx_buffer, uint16_t len, uint8_t mode, uint
     // Transmit the request message over RS485
     RS485sendString((char *)tx_buffer);
 
-    // Set the length for the response message inteded to be received
+    // Set the length for the response message intended to be received
     master_rcv_buffer_len = 5 + (register_num * 2);
     return 1;
 }
@@ -103,7 +109,7 @@ uint8_t modbusWriteCoil(uint8_t *tx_buffer, uint16_t len, uint8_t slave_address,
 
     // Assign the number of coil/discrete input to be read
     tx_buffer[5] = 0x00;
-    if (coil_state = COIL_ON)
+    if (coil_state == COIL_ON)
         tx_buffer[4] = 0xFF;
     else if (coil_state == COIL_OFF)
         tx_buffer[4] = 0x00;
@@ -118,7 +124,7 @@ uint8_t modbusWriteCoil(uint8_t *tx_buffer, uint16_t len, uint8_t slave_address,
     // Transmit the request message over RS485
     RS485sendString((char *)tx_buffer);
 
-    // Set the length for the response message inteded to be received
+    // Set the length for the response message intended to be received
     master_rcv_buffer_len = 8;
     return 1;
 }
@@ -151,7 +157,7 @@ uint8_t modbusWriteRegister(uint8_t *tx_buffer, uint16_t len, uint8_t slave_addr
     // Transmit the request message over RS485
     RS485sendString((char *)tx_buffer);
 
-    // Set the length for the response message inteded to be received
+    // Set the length for the response message intended to be received
     master_rcv_buffer_len = 8;
     return 1;
 }
@@ -181,20 +187,20 @@ uint8_t modbusWriteCoils(uint8_t *tx_buffer, uint16_t len, uint8_t slave_address
         tx_buffer[i + 6] = coil_state[i];
 
     // Assign 2 bits of check sum
-    uint16_t checksum = = crc16(tx_buffer, i);
+    uint16_t checksum = crc16(tx_buffer, i);
     tx_buffer[i++] = checksum & 0xFF;
     tx_buffer[i] = (checksum >> 8) & 0xFF;
 
     // Transmit the request message over RS485
     RS485sendString((char *)tx_buffer);
 
-    // Set the length for the response message inteded to be received
+    // Set the length for the response message intended to be received
     master_rcv_buffer_len = 8;
     return 1;
 }
 
 // Function to write value to registers via ModbusRTU
-uint8_t modbusWriteRegisters(uint8_t *tx_buffer, uint16_t len, uint8_t slave_address, uint8_t start_register, uint8_t register_num, uint16_t *register_value)
+uint8_t modbusWriteRegisters(uint8_t *tx_buffer, uint16_t len, uint8_t slave_address, uint16_t start_register, uint16_t register_num, uint16_t *register_value)
 {
     // Clear the transmit buffer
     clearBuffer(tx_buffer, len);
@@ -233,7 +239,7 @@ uint8_t modbusWriteRegisters(uint8_t *tx_buffer, uint16_t len, uint8_t slave_add
     // Transmit the request message over RS485
     RS485sendString((char *)tx_buffer);
 
-    // Set the length for the response message inteded to be received
+    // Set the length for the response message intended to be received
     master_rcv_buffer_len = 8;
     return 1;
 }
@@ -241,5 +247,25 @@ uint8_t modbusWriteRegisters(uint8_t *tx_buffer, uint16_t len, uint8_t slave_add
 // Function to read the response from the slave via ModbusRTU
 int modbusRcvResponse(uint8_t *rcv_buffer)
 {
-    return RS485rcvString(rcv_buffer, master_rcv_buffer_len);
+    return RS485rcvString((char *)rcv_buffer, master_rcv_buffer_len);
+}
+
+uint8_t modbusTest(uint8_t *tx_buffer, uint16_t len, uint8_t mode, uint8_t slave_address, uint16_t start_coil, uint16_t coil_num)
+{
+    // Clear the transmit buffer
+    clearBuffer(tx_buffer, len);
+    
+    tx_buffer[0] = 0x31;
+    tx_buffer[1] = 0x32;
+    tx_buffer[2] = 0x33;
+    tx_buffer[3] = 0x34;
+    tx_buffer[4] = 0x35;
+    tx_buffer[5] = 0x36;
+//    uint16_t checksum = crc16(tx_buffer, 6);
+    tx_buffer[6] = 0x37;
+    tx_buffer[7] = 0x38;
+    // Transmit the request message over RS485
+//    RS485sendString((char *)tx_buffer);
+    RS485sendString((char*)tx_buffer);
+    return 1;
 }
